@@ -41,7 +41,10 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(taskStore: TaskStore() )
+        Group {
+            ContentView(taskStore: TaskStore() ).environment(\.colorScheme, .light)
+            ContentView(taskStore: TaskStore() ).environment(\.colorScheme, .dark)
+        }
     }
 }
 
