@@ -13,7 +13,7 @@ struct AlarmOverviewView: View {
     @State private var alarmList = [Alarm]()
     
     var body: some View {
-        NavigationView{
+        NavigationView {
             VStack {
                 AlarmResetView(alarmList: $alarmList)
                     .accessibility(addTraits: .isHeader)
