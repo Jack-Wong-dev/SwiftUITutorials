@@ -19,6 +19,7 @@
 		0ACD32C2248F1EF100301C6C /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACD32C1248F1EF100301C6C /* GridLayout.swift */; };
 		0ACD32C5248F24F500301C6C /* Arrays+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACD32C4248F24F500301C6C /* Arrays+Identifiable.swift */; };
 		0ACD32C9248F32AE00301C6C /* Array+Only.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACD32C8248F32AE00301C6C /* Array+Only.swift */; };
+		0ACD32CB248F3B7100301C6C /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACD32CA248F3B7100301C6C /* Pie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		0ACD32C1248F1EF100301C6C /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		0ACD32C4248F24F500301C6C /* Arrays+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Arrays+Identifiable.swift"; sourceTree = "<group>"; };
 		0ACD32C8248F32AE00301C6C /* Array+Only.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Only.swift"; sourceTree = "<group>"; };
+		0ACD32CA248F3B7100301C6C /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				0A1C1573247E14F5001DFA4B /* EmojiMemoryGameView.swift */,
 				0ACD32BF248F18A500301C6C /* Grid.swift */,
 				0ACD32C1248F1EF100301C6C /* GridLayout.swift */,
+				0ACD32CA248F3B7100301C6C /* Pie.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ACD32CB248F3B7100301C6C /* Pie.swift in Sources */,
 				0A1C1570247E14F5001DFA4B /* AppDelegate.swift in Sources */,
 				0ACD32C5248F24F500301C6C /* Arrays+Identifiable.swift in Sources */,
 				0A1C1572247E14F5001DFA4B /* SceneDelegate.swift in Sources */,
