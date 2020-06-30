@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		0A41E70F24ABCE620041F2D2 /* toy_biplane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E70B24ABCE620041F2D2 /* toy_biplane.usdz */; };
 		0A41E71024ABCE620041F2D2 /* toy_robot_vintage.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E70C24ABCE620041F2D2 /* toy_robot_vintage.usdz */; };
 		0A41E71124ABCE620041F2D2 /* fender_stratocaster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E70D24ABCE620041F2D2 /* fender_stratocaster.usdz */; };
+		0A41E71324ABE1580041F2D2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A41E71224ABE1580041F2D2 /* Model.swift */; };
+		0A41E71624ABE86A0041F2D2 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 0A41E71524ABE86A0041F2D2 /* FocusEntity */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		0A41E70B24ABCE620041F2D2 /* toy_biplane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane.usdz; sourceTree = "<group>"; };
 		0A41E70C24ABCE620041F2D2 /* toy_robot_vintage.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_robot_vintage.usdz; sourceTree = "<group>"; };
 		0A41E70D24ABCE620041F2D2 /* fender_stratocaster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = fender_stratocaster.usdz; sourceTree = "<group>"; };
+		0A41E71224ABE1580041F2D2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A41E71624ABE86A0041F2D2 /* FocusEntity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +67,7 @@
 				0A41E70924ABCE240041F2D2 /* Models */,
 				0A41E6F824ABCDA60041F2D2 /* AppDelegate.swift */,
 				0A41E6FA24ABCDA60041F2D2 /* ContentView.swift */,
+				0A41E71224ABE1580041F2D2 /* Model.swift */,
 				0A41E6FE24ABCDAE0041F2D2 /* Assets.xcassets */,
 				0A41E70324ABCDAE0041F2D2 /* Info.plist */,
 				0A41E70024ABCDAE0041F2D2 /* Preview Content */,
@@ -105,6 +110,9 @@
 			dependencies = (
 			);
 			name = ModelPickerApp;
+			packageProductDependencies = (
+				0A41E71524ABE86A0041F2D2 /* FocusEntity */,
+			);
 			productName = ModelPickerApp;
 			productReference = 0A41E6F524ABCDA60041F2D2 /* ModelPickerApp.app */;
 			productType = "com.apple.product-type.application";
@@ -132,6 +140,9 @@
 				Base,
 			);
 			mainGroup = 0A41E6EC24ABCDA60041F2D2;
+			packageReferences = (
+				0A41E71424ABE86A0041F2D2 /* XCRemoteSwiftPackageReference "FocusEntity" */,
+			);
 			productRefGroup = 0A41E6F624ABCDA60041F2D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -162,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A41E71324ABE1580041F2D2 /* Model.swift in Sources */,
 				0A41E6FB24ABCDA60041F2D2 /* ContentView.swift in Sources */,
 				0A41E6F924ABCDA60041F2D2 /* AppDelegate.swift in Sources */,
 			);
@@ -350,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0A41E71424ABE86A0041F2D2 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0A41E71524ABE86A0041F2D2 /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A41E71424ABE86A0041F2D2 /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0A41E6ED24ABCDA60041F2D2 /* Project object */;
 }
