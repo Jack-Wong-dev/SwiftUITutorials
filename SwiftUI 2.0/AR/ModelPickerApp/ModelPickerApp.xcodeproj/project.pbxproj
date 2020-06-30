@@ -9,19 +9,25 @@
 /* Begin PBXBuildFile section */
 		0A41E6F924ABCDA60041F2D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A41E6F824ABCDA60041F2D2 /* AppDelegate.swift */; };
 		0A41E6FB24ABCDA60041F2D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A41E6FA24ABCDA60041F2D2 /* ContentView.swift */; };
-		0A41E6FD24ABCDA60041F2D2 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 0A41E6FC24ABCDA60041F2D2 /* Experience.rcproject */; };
 		0A41E6FF24ABCDAE0041F2D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E6FE24ABCDAE0041F2D2 /* Assets.xcassets */; };
 		0A41E70224ABCDAE0041F2D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E70124ABCDAE0041F2D2 /* Preview Assets.xcassets */; };
+		0A41E70E24ABCE620041F2D2 /* teapot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E70A24ABCE620041F2D2 /* teapot.usdz */; };
+		0A41E70F24ABCE620041F2D2 /* toy_biplane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E70B24ABCE620041F2D2 /* toy_biplane.usdz */; };
+		0A41E71024ABCE620041F2D2 /* toy_robot_vintage.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E70C24ABCE620041F2D2 /* toy_robot_vintage.usdz */; };
+		0A41E71124ABCE620041F2D2 /* fender_stratocaster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E70D24ABCE620041F2D2 /* fender_stratocaster.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A41E6F524ABCDA60041F2D2 /* ModelPickerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModelPickerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A41E6F824ABCDA60041F2D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A41E6FA24ABCDA60041F2D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		0A41E6FC24ABCDA60041F2D2 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		0A41E6FE24ABCDAE0041F2D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A41E70124ABCDAE0041F2D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0A41E70324ABCDAE0041F2D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A41E70A24ABCE620041F2D2 /* teapot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = teapot.usdz; sourceTree = "<group>"; };
+		0A41E70B24ABCE620041F2D2 /* toy_biplane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane.usdz; sourceTree = "<group>"; };
+		0A41E70C24ABCE620041F2D2 /* toy_robot_vintage.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_robot_vintage.usdz; sourceTree = "<group>"; };
+		0A41E70D24ABCE620041F2D2 /* fender_stratocaster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = fender_stratocaster.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +60,9 @@
 		0A41E6F724ABCDA60041F2D2 /* ModelPickerApp */ = {
 			isa = PBXGroup;
 			children = (
+				0A41E70924ABCE240041F2D2 /* Models */,
 				0A41E6F824ABCDA60041F2D2 /* AppDelegate.swift */,
 				0A41E6FA24ABCDA60041F2D2 /* ContentView.swift */,
-				0A41E6FC24ABCDA60041F2D2 /* Experience.rcproject */,
 				0A41E6FE24ABCDAE0041F2D2 /* Assets.xcassets */,
 				0A41E70324ABCDAE0041F2D2 /* Info.plist */,
 				0A41E70024ABCDAE0041F2D2 /* Preview Content */,
@@ -70,6 +76,17 @@
 				0A41E70124ABCDAE0041F2D2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0A41E70924ABCE240041F2D2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A41E70D24ABCE620041F2D2 /* fender_stratocaster.usdz */,
+				0A41E70A24ABCE620041F2D2 /* teapot.usdz */,
+				0A41E70B24ABCE620041F2D2 /* toy_biplane.usdz */,
+				0A41E70C24ABCE620041F2D2 /* toy_robot_vintage.usdz */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,7 +146,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A41E70E24ABCE620041F2D2 /* teapot.usdz in Resources */,
+				0A41E71024ABCE620041F2D2 /* toy_robot_vintage.usdz in Resources */,
+				0A41E71124ABCE620041F2D2 /* fender_stratocaster.usdz in Resources */,
 				0A41E70224ABCDAE0041F2D2 /* Preview Assets.xcassets in Resources */,
+				0A41E70F24ABCE620041F2D2 /* toy_biplane.usdz in Resources */,
 				0A41E6FF24ABCDAE0041F2D2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,7 +164,6 @@
 			files = (
 				0A41E6FB24ABCDA60041F2D2 /* ContentView.swift in Sources */,
 				0A41E6F924ABCDA60041F2D2 /* AppDelegate.swift in Sources */,
-				0A41E6FD24ABCDA60041F2D2 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
