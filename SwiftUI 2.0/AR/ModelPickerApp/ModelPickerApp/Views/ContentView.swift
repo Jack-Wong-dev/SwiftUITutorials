@@ -15,6 +15,7 @@ struct ContentView : View {
     @State private var isPlacementEnabled = false
     @State private var selectedModel: Model?
     @State private var modelConfirmedForPlacement: Model?
+    @State private var showScrollView = true
     
     private var models: [Model] = {
         //Dynamically get our model filenames
@@ -36,12 +37,18 @@ struct ContentView : View {
     
     var body: some View {
         ZStack (alignment: .bottom){
-            ARViewContainer(modelConfirmedForPlacement: $modelConfirmedForPlacement).edgesIgnoringSafeArea(.all)
+            ARViewContainer(modelConfirmedForPlacement: $modelConfirmedForPlacement)
             
             if isPlacementEnabled {
                 PlacementButtonsView(isPlacementEnabled: $isPlacementEnabled, selectedModel: $selectedModel, modelConfirmedForPlacement: $modelConfirmedForPlacement)
+                
             }else {
-                ModelPickerView(isPlacementEnabled: $isPlacementEnabled, selectedModel: $selectedModel, models: models)
+                ModelPickerView(isPlacementEnabled: $isPlacementEnabled, selectedModel: $selectedModel, models: models).opacity(showScrollView ? 1.0 : 0.0).animation(.easeIn(duration: 0.2))
+            }
+        }.onTapGesture {
+            if !isPlacementEnabled {
+                showScrollView.toggle()
+                print("DEBUG: Scroll view is now \(showScrollView ? "visible" : "hidden")")
             }
         }
     }
@@ -140,7 +147,7 @@ struct ModelPickerView: View {
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            LazyHStack(spacing: 30) {
+            LazyHStack(spacing: 15) {
                 ForEach(0 ..< models.count) { index in
                     Button(action: {
                         print("DEBUG: selected model with name \(self.models[index].modelName)")
