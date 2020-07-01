@@ -43,11 +43,16 @@ struct ContentView : View {
                 PlacementButtonsView(isPlacementEnabled: $isPlacementEnabled, selectedModel: $selectedModel, modelConfirmedForPlacement: $modelConfirmedForPlacement)
                 
             }else {
-                ModelPickerView(isPlacementEnabled: $isPlacementEnabled, selectedModel: $selectedModel, models: models).opacity(showScrollView ? 1.0 : 0.0).animation(.easeIn(duration: 0.2))
+//                ModelPickerView(isPlacementEnabled: $isPlacementEnabled, selectedModel: $selectedModel, models: models).opacity(showScrollView ? 1.0 : 0.0).animation(.easeIn(duration: 0.2))
+                if showScrollView {
+                    ModelPickerView(isPlacementEnabled: $isPlacementEnabled, selectedModel: $selectedModel, models: models).transition(.move(edge: .bottom))
+                }
             }
         }.onTapGesture {
             if !isPlacementEnabled {
-                showScrollView.toggle()
+                withAnimation {
+                    showScrollView.toggle()
+                }
                 print("DEBUG: Scroll view is now \(showScrollView ? "visible" : "hidden")")
             }
         }
