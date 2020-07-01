@@ -7,29 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A038BC224AC3B5000E31CEE /* pickle_rick.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BB924AC3B4F00E31CEE /* pickle_rick.usdz */; };
+		0A038BC324AC3B5000E31CEE /* fender_stratocaster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BBA24AC3B4F00E31CEE /* fender_stratocaster.usdz */; };
+		0A038BC424AC3B5000E31CEE /* gundam.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BBB24AC3B4F00E31CEE /* gundam.usdz */; };
+		0A038BC524AC3B5000E31CEE /* teapot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BBC24AC3B5000E31CEE /* teapot.usdz */; };
+		0A038BC624AC3B5000E31CEE /* toy_biplane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BBD24AC3B5000E31CEE /* toy_biplane.usdz */; };
+		0A038BC724AC3B5000E31CEE /* lambo.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BBE24AC3B5000E31CEE /* lambo.usdz */; };
+		0A038BC824AC3B5000E31CEE /* toy_robot_vintage.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BBF24AC3B5000E31CEE /* toy_robot_vintage.usdz */; };
+		0A038BC924AC3B5000E31CEE /* udon_meal5.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BC024AC3B5000E31CEE /* udon_meal5.usdz */; };
+		0A038BCA24AC3B5000E31CEE /* cartoon.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BC124AC3B5000E31CEE /* cartoon.usdz */; };
+		0A038BCC24AC3FC200E31CEE /* Medieval_Fantasy_Tavern.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BCB24AC3FC200E31CEE /* Medieval_Fantasy_Tavern.usdz */; };
+		0A038BCE24AC428100E31CEE /* Mr_Meeseks.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BCD24AC428100E31CEE /* Mr_Meeseks.usdz */; };
+		0A13BF2024AC393600FE52CF /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 0A13BF1F24AC393600FE52CF /* FocusEntity */; };
 		0A41E6F924ABCDA60041F2D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A41E6F824ABCDA60041F2D2 /* AppDelegate.swift */; };
 		0A41E6FB24ABCDA60041F2D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A41E6FA24ABCDA60041F2D2 /* ContentView.swift */; };
 		0A41E6FF24ABCDAE0041F2D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E6FE24ABCDAE0041F2D2 /* Assets.xcassets */; };
 		0A41E70224ABCDAE0041F2D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E70124ABCDAE0041F2D2 /* Preview Assets.xcassets */; };
-		0A41E70E24ABCE620041F2D2 /* teapot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E70A24ABCE620041F2D2 /* teapot.usdz */; };
-		0A41E70F24ABCE620041F2D2 /* toy_biplane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E70B24ABCE620041F2D2 /* toy_biplane.usdz */; };
-		0A41E71024ABCE620041F2D2 /* toy_robot_vintage.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E70C24ABCE620041F2D2 /* toy_robot_vintage.usdz */; };
-		0A41E71124ABCE620041F2D2 /* fender_stratocaster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E70D24ABCE620041F2D2 /* fender_stratocaster.usdz */; };
 		0A41E71324ABE1580041F2D2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A41E71224ABE1580041F2D2 /* Model.swift */; };
-		0A41E71624ABE86A0041F2D2 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 0A41E71524ABE86A0041F2D2 /* FocusEntity */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A038BB924AC3B4F00E31CEE /* pickle_rick.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = pickle_rick.usdz; sourceTree = "<group>"; };
+		0A038BBA24AC3B4F00E31CEE /* fender_stratocaster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = fender_stratocaster.usdz; path = ../../../../../../../Downloads/fender_stratocaster.usdz; sourceTree = "<group>"; };
+		0A038BBB24AC3B4F00E31CEE /* gundam.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gundam.usdz; sourceTree = "<group>"; };
+		0A038BBC24AC3B5000E31CEE /* teapot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = teapot.usdz; path = ../../../../../../../Downloads/teapot.usdz; sourceTree = "<group>"; };
+		0A038BBD24AC3B5000E31CEE /* toy_biplane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = toy_biplane.usdz; path = ../../../../../../../Downloads/toy_biplane.usdz; sourceTree = "<group>"; };
+		0A038BBE24AC3B5000E31CEE /* lambo.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = lambo.usdz; sourceTree = "<group>"; };
+		0A038BBF24AC3B5000E31CEE /* toy_robot_vintage.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = toy_robot_vintage.usdz; path = ../../../../../../../Downloads/toy_robot_vintage.usdz; sourceTree = "<group>"; };
+		0A038BC024AC3B5000E31CEE /* udon_meal5.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = udon_meal5.usdz; sourceTree = "<group>"; };
+		0A038BC124AC3B5000E31CEE /* cartoon.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = cartoon.usdz; sourceTree = "<group>"; };
+		0A038BCB24AC3FC200E31CEE /* Medieval_Fantasy_Tavern.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Medieval_Fantasy_Tavern.usdz; sourceTree = "<group>"; };
+		0A038BCD24AC428100E31CEE /* Mr_Meeseks.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Mr_Meeseks.usdz; sourceTree = "<group>"; };
 		0A41E6F524ABCDA60041F2D2 /* ModelPickerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModelPickerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A41E6F824ABCDA60041F2D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A41E6FA24ABCDA60041F2D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0A41E6FE24ABCDAE0041F2D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A41E70124ABCDAE0041F2D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0A41E70324ABCDAE0041F2D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A41E70A24ABCE620041F2D2 /* teapot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = teapot.usdz; sourceTree = "<group>"; };
-		0A41E70B24ABCE620041F2D2 /* toy_biplane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane.usdz; sourceTree = "<group>"; };
-		0A41E70C24ABCE620041F2D2 /* toy_robot_vintage.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_robot_vintage.usdz; sourceTree = "<group>"; };
-		0A41E70D24ABCE620041F2D2 /* fender_stratocaster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = fender_stratocaster.usdz; sourceTree = "<group>"; };
 		0A41E71224ABE1580041F2D2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -38,13 +52,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A41E71624ABE86A0041F2D2 /* FocusEntity in Frameworks */,
+				0A13BF2024AC393600FE52CF /* FocusEntity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A13BF2124AC396B00FE52CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A41E6FA24ABCDA60041F2D2 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0A41E6EC24ABCDA60041F2D2 = {
 			isa = PBXGroup;
 			children = (
@@ -64,9 +86,9 @@
 		0A41E6F724ABCDA60041F2D2 /* ModelPickerApp */ = {
 			isa = PBXGroup;
 			children = (
+				0A13BF2124AC396B00FE52CF /* Views */,
 				0A41E70924ABCE240041F2D2 /* Models */,
 				0A41E6F824ABCDA60041F2D2 /* AppDelegate.swift */,
-				0A41E6FA24ABCDA60041F2D2 /* ContentView.swift */,
 				0A41E71224ABE1580041F2D2 /* Model.swift */,
 				0A41E6FE24ABCDAE0041F2D2 /* Assets.xcassets */,
 				0A41E70324ABCDAE0041F2D2 /* Info.plist */,
@@ -86,10 +108,17 @@
 		0A41E70924ABCE240041F2D2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0A41E70D24ABCE620041F2D2 /* fender_stratocaster.usdz */,
-				0A41E70A24ABCE620041F2D2 /* teapot.usdz */,
-				0A41E70B24ABCE620041F2D2 /* toy_biplane.usdz */,
-				0A41E70C24ABCE620041F2D2 /* toy_robot_vintage.usdz */,
+				0A038BC124AC3B5000E31CEE /* cartoon.usdz */,
+				0A038BBA24AC3B4F00E31CEE /* fender_stratocaster.usdz */,
+				0A038BBE24AC3B5000E31CEE /* lambo.usdz */,
+				0A038BB924AC3B4F00E31CEE /* pickle_rick.usdz */,
+				0A038BBB24AC3B4F00E31CEE /* gundam.usdz */,
+				0A038BBC24AC3B5000E31CEE /* teapot.usdz */,
+				0A038BBD24AC3B5000E31CEE /* toy_biplane.usdz */,
+				0A038BBF24AC3B5000E31CEE /* toy_robot_vintage.usdz */,
+				0A038BC024AC3B5000E31CEE /* udon_meal5.usdz */,
+				0A038BCD24AC428100E31CEE /* Mr_Meeseks.usdz */,
+				0A038BCB24AC3FC200E31CEE /* Medieval_Fantasy_Tavern.usdz */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -111,7 +140,7 @@
 			);
 			name = ModelPickerApp;
 			packageProductDependencies = (
-				0A41E71524ABE86A0041F2D2 /* FocusEntity */,
+				0A13BF1F24AC393600FE52CF /* FocusEntity */,
 			);
 			productName = ModelPickerApp;
 			productReference = 0A41E6F524ABCDA60041F2D2 /* ModelPickerApp.app */;
@@ -141,7 +170,7 @@
 			);
 			mainGroup = 0A41E6EC24ABCDA60041F2D2;
 			packageReferences = (
-				0A41E71424ABE86A0041F2D2 /* XCRemoteSwiftPackageReference "FocusEntity" */,
+				0A13BF1E24AC393600FE52CF /* XCRemoteSwiftPackageReference "FocusEntity" */,
 			);
 			productRefGroup = 0A41E6F624ABCDA60041F2D2 /* Products */;
 			projectDirPath = "";
@@ -157,11 +186,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A41E70E24ABCE620041F2D2 /* teapot.usdz in Resources */,
-				0A41E71024ABCE620041F2D2 /* toy_robot_vintage.usdz in Resources */,
-				0A41E71124ABCE620041F2D2 /* fender_stratocaster.usdz in Resources */,
+				0A038BC624AC3B5000E31CEE /* toy_biplane.usdz in Resources */,
 				0A41E70224ABCDAE0041F2D2 /* Preview Assets.xcassets in Resources */,
-				0A41E70F24ABCE620041F2D2 /* toy_biplane.usdz in Resources */,
+				0A038BC524AC3B5000E31CEE /* teapot.usdz in Resources */,
+				0A038BCE24AC428100E31CEE /* Mr_Meeseks.usdz in Resources */,
+				0A038BCC24AC3FC200E31CEE /* Medieval_Fantasy_Tavern.usdz in Resources */,
+				0A038BC924AC3B5000E31CEE /* udon_meal5.usdz in Resources */,
+				0A038BC824AC3B5000E31CEE /* toy_robot_vintage.usdz in Resources */,
+				0A038BC724AC3B5000E31CEE /* lambo.usdz in Resources */,
+				0A038BCA24AC3B5000E31CEE /* cartoon.usdz in Resources */,
+				0A038BC224AC3B5000E31CEE /* pickle_rick.usdz in Resources */,
+				0A038BC324AC3B5000E31CEE /* fender_stratocaster.usdz in Resources */,
+				0A038BC424AC3B5000E31CEE /* gundam.usdz in Resources */,
 				0A41E6FF24ABCDAE0041F2D2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,7 +400,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0A41E71424ABE86A0041F2D2 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+		0A13BF1E24AC393600FE52CF /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
 			requirement = {
@@ -375,9 +411,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0A41E71524ABE86A0041F2D2 /* FocusEntity */ = {
+		0A13BF1F24AC393600FE52CF /* FocusEntity */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0A41E71424ABE86A0041F2D2 /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			package = 0A13BF1E24AC393600FE52CF /* XCRemoteSwiftPackageReference "FocusEntity" */;
 			productName = FocusEntity;
 		};
 /* End XCSwiftPackageProductDependency section */
