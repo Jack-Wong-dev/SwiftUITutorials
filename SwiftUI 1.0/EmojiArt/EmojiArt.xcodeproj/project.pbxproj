@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1E990C24B023C7002BE647 /* EmojiArtDocumentExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E990B24B023C7002BE647 /* EmojiArtDocumentExtensions.swift */; };
 		0A4915502492BE8A005DFEC3 /* EmojiArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A49154F2492BE8A005DFEC3 /* EmojiArt.swift */; };
 		0A4915532492C2F6005DFEC3 /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4915522492C2F6005DFEC3 /* CollectionExtension.swift */; };
 		0A4915552492C438005DFEC3 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4915542492C438005DFEC3 /* URLExtension.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A1E990B24B023C7002BE647 /* EmojiArtDocumentExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtDocumentExtensions.swift; sourceTree = "<group>"; };
 		0A49154F2492BE8A005DFEC3 /* EmojiArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArt.swift; sourceTree = "<group>"; };
 		0A4915522492C2F6005DFEC3 /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
 		0A4915542492C438005DFEC3 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			children = (
 				0A4915522492C2F6005DFEC3 /* CollectionExtension.swift */,
 				0A4915542492C438005DFEC3 /* URLExtension.swift */,
+				0A1E990B24B023C7002BE647 /* EmojiArtDocumentExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -146,7 +149,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Jack Wong";
 				TargetAttributes = {
 					0AD52BFE2492B8120060C3BD = {
@@ -192,6 +195,7 @@
 			files = (
 				0AD52C032492B8120060C3BD /* AppDelegate.swift in Sources */,
 				0A4915552492C438005DFEC3 /* URLExtension.swift in Sources */,
+				0A1E990C24B023C7002BE647 /* EmojiArtDocumentExtensions.swift in Sources */,
 				0AD52C052492B8120060C3BD /* SceneDelegate.swift in Sources */,
 				0A4915502492BE8A005DFEC3 /* EmojiArt.swift in Sources */,
 				0AD52C072492B8120060C3BD /* EmojiArtDocumentView.swift in Sources */,
@@ -240,6 +244,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -300,6 +305,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
