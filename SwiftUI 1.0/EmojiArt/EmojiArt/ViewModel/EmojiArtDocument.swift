@@ -1,64 +1,88 @@
-//
-//  EmojiArtDocument.swift
-//  EmojiArt
-//
-//  Created by Jack Wong on 6/11/20.
-//  Copyright © 2020 Jack Wong. All rights reserved.
-//
-
+import Foundation
 import SwiftUI
+import Combine
 
 class EmojiArtDocument: ObservableObject {
+    static let palette: String = "☀️👋🏻🎉🤓✅🌍"
     
-    static let palette: String = "⭐️⛈🍎🌎🥨🥎"
+    // @Published // Workaround for property observer problem with property wrappers
+    private var emojiArt: EmojiArt = EmojiArt() {
+        willSet {
+            objectWillChange.send()
+        }
+        didSet {
+            UserDefaults.standard.set(emojiArt.json, forKey: EmojiArtDocument.untitled)
+        }
+    }
     
-    @Published private var emojiArt = EmojiArt()
+    private static var untitled = "EmojiArtDocument.Untitled"
+    
+    init () {
+        emojiArt = EmojiArt(json: UserDefaults.standard.data(forKey: EmojiArtDocument.untitled)) ?? EmojiArt()
+        fetchBackgroundImageData()
+    }
+    
     @Published private(set) var backgroundImage: UIImage?
     
-    var emojis: [EmojiArt.Emoji] { emojiArt.emojis}
+    var eomjis: [EmojiArt.Emoji] { emojiArt.emojis}
     
-    //MARK: - Intent(s)
-    func addEmoji(_ emoji: String, at location: CGPoint, size: CGFloat){
+    // MARK: - Intents
+    func addEmoji(_ emoji: String, at location: CGPoint, size: CGFloat) {
         emojiArt.addEmoji(emoji, x: Int(location.x), y: Int(location.y), size: Int(size))
     }
     
-    func moveEmoji(_ emoji: EmojiArt.Emoji, by offset: CGSize){
+    func moveEmoji(_ emoji: EmojiArt.Emoji, by offset: CGSize) {
         if let index = emojiArt.emojis.firstIndex(matching: emoji) {
             emojiArt.emojis[index].x += Int(offset.width)
             emojiArt.emojis[index].y += Int(offset.height)
         }
     }
     
-    func scaleEmoji(_ emoji: EmojiArt.Emoji, by scale: CGFloat){
+    func scaleEmoji(_ emoji: EmojiArt.Emoji, by scale: CGFloat) {
         if let index = emojiArt.emojis.firstIndex(matching: emoji) {
             emojiArt.emojis[index].size = Int((CGFloat(emojiArt.emojis[index].size) * scale).rounded(.toNearestOrEven))
         }
     }
     
-    func setBackgroundURL(_ url: URL?) {
+    func removeEmoji(_ emoji: EmojiArt.Emoji) {
+        if let index = emojiArt.emojis.firstIndex(matching: emoji) {
+            emojiArt.emojis.remove(at: index)
+        }
+    }
+    
+    func setBackgroundUrl(_ url: URL?) {
         emojiArt.backgroundURL = url?.imageURL
         fetchBackgroundImageData()
     }
     
-    private func fetchBackgroundImageData(){
-        //Clears the background image
+    func reset() {
+        self.emojiArt = EmojiArt()
+        fetchBackgroundImageData()
+    }
+    
+    // MARK: - Helper functions
+    private func fetchBackgroundImageData() {
         backgroundImage = nil
         
-        if let url = emojiArt.backgroundURL {
+        if let url = self.emojiArt.backgroundURL {
+            /// Fetch the data of a url on the global dispatch queue with Qos set to "user initiated"
             DispatchQueue.global(qos: .userInitiated).async {
                 if let imageData = try? Data(contentsOf: url) {
+                    /// When we have the image data, we can update the background image. But since we are updating the UI we dispatch the closure on the
+                    /// main queue.
                     DispatchQueue.main.async {
-                        if url == self.emojiArt.backgroundURL{
+                        if url == self.emojiArt.backgroundURL {
                             self.backgroundImage = UIImage(data: imageData)
-                        }                    }
+                        }
+                    }
                 }
             }
         }
     }
-    
 }
 
 extension EmojiArt.Emoji {
-    var fontSize: CGFloat { CGFloat(self.size) }
-    var location: CGPoint { CGPoint(x: CGFloat(x), y: CGFloat(y))}
+    var fontSize: CGFloat { CGFloat (self.size) }
+    var location: CGPoint { CGPoint (x: self.x, y: self.y)}
 }
+
