@@ -10,8 +10,13 @@ import SwiftUI
 struct ContentView: View {
     @State var show = false
     @State var showCard = false
+    @State var showFull = false
+    
     @State var viewState = CGSize.zero
-        //Like Animation States, drag states can be declared the same way.  Using CGSize to store x and y positions.  Value can be reset using the zero property
+    @State var bottomState = CGSize.zero
+    
+    //Like Animation States, drag states can be declared the same way.  Using CGSize to store x and y positions.  Value can be reset using the zero property
+    
     
     var body: some View {
         ZStack {
@@ -19,13 +24,13 @@ struct ContentView: View {
             TitleView()
                 .blur(radius: show ? 20 : 0) //blur out view when cards are revealed
                 .opacity( showCard ? 0.4 : 1)
-                .offset(y: showCard ? -200 : 0)
+                .offset(y: showCard ? -200 : 0) //Moved off of the visible area
                 .animation(
                     Animation
                         .default
-                        .delay(0.1)
-//                        .speed(2)
-//                        .repeatCount(3, autoreverses: false)
+                        .delay(0.1)  //Animation delay, so that the bottom card would animate first
+                    //                        .speed(2)
+                    //                        .repeatCount(3, autoreverses: false)
                 )
             
             //Cards underneath
@@ -35,7 +40,7 @@ struct ContentView: View {
                 .cornerRadius(20)
                 .shadow(radius: 20)
                 .offset(x: 0, y: show ? -400 : -40) //reveal card
-                .offset(x: viewState.width, y: viewState.height)
+                .offset(x: viewState.width, y: viewState.height) //change as user drags main Card
                 .offset(y: showCard ? -180 : 0)
                 .scaleEffect( showCard ? 1 : 0.9)
                 .rotationEffect(.degrees(show ? 0 : 10)) //cards are angled
@@ -46,7 +51,7 @@ struct ContentView: View {
                 )
                 .blendMode(.hardLight) //blending colors
                 .animation(.easeInOut(duration: 0.5))
-
+            
             
             BackCardView()
                 .frame(width: 340, height: 220)
@@ -70,13 +75,13 @@ struct ContentView: View {
             CardView()
                 .frame(width: showCard ? 370 : 340, height: 220)
                 .background(Color.black)
-                .clipShape(RoundedRectangle(cornerRadius: showCard ? 30 : 20, style: .continuous))
-//                .cornerRadius(20)
+                .clipShape(RoundedRectangle(cornerRadius: showCard ? 30 : 20, style: .continuous)) //Expand/Shrink effect
+                //                .cornerRadius(20)
                 .shadow(radius: 20)
                 .offset(x: viewState.width, y: viewState.height)
                 .offset(y: showCard ? -100 : 0)
                 .blendMode(.hardLight)
-                .animation(.spring(response: 0.3, dampingFraction: 0.6, blendDuration: 0))
+                .animation(.spring(response: 0.3, dampingFraction: 0.6, blendDuration: 0)) //Card would snap back into place after gesture end
                 .onTapGesture {
                     showCard.toggle()
                 }
@@ -92,10 +97,37 @@ struct ContentView: View {
                         }
                 )
             
+            //Debug View
+//            Text("\(bottomState.height)").offset(y: -300)
+            
             ButtonCardView()
                 .offset(x: 0, y: showCard ? 360 : 1000)
+                .offset(y: bottomState.height)
                 .blur(radius: show ? 20 : 0)
                 .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
+                .gesture(
+                    DragGesture().onChanged { value in
+                        bottomState = value.translation
+                        if showFull {
+                            bottomState.height += -300
+                        }
+                        if bottomState.height < -300 {  //Maximum drag
+                            bottomState.height = -300  //snaps to that anchor, card would not go above that
+                        }
+                    }
+                    .onEnded { value in
+                        if bottomState.height > 50 {
+                            showCard = false
+                        }
+                        if (bottomState.height < -100  && !showFull) || (bottomState.height < -250 && showFull) {
+                            bottomState.height = -300
+                            showFull = true
+                        } else {
+                            bottomState = .zero
+                            showFull = false
+                        }
+                    }
+                )
         }
     }
 }
@@ -130,7 +162,7 @@ struct CardView: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 300, height: 110, alignment: .top)
         }
-
+        
     }
 }
 
