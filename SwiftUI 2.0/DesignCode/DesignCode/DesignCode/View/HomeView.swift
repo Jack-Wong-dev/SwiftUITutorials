@@ -26,8 +26,8 @@ struct HomeView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 30) {
-                    ForEach(0 ..< 5) { item in
-                        SectionView()
+                    ForEach(sectionData) { item in
+                        SectionView(section: item)
                     }
                 }
                 .padding(30)
@@ -47,26 +47,36 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 struct SectionView: View {
+    
+    var section: Section
+    
     var body: some View {
         VStack {
             HStack(alignment: .top) {
-                Text("Prototype Designs in SwiftUI")
+                Text(section.title)
                     .font(.system(size: 24, weight: .bold))
                     .frame(width: 160, alignment: .leading)
-                Image("Logo1")
+                Image(section.logo)
             }
-            Text("18 Sections".uppercased())
+            Text(section.text.uppercased())
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            Image("Card1")
+            section.image
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 210)
         }
         .padding([.top, .horizontal], 20)
         .frame(width: 275, height: 275)
-        .background(Color("card1"))
+        .background(section.color)
         .cornerRadius(30)
-        .shadow(color: Color("card1").opacity(0.3), radius: 20, x: 0, y: 20)
+        .shadow(color: section.color.opacity(0.3), radius: 20, x: 0, y: 20)
     }
 }
+
+
+let sectionData = [
+    Section(title: "Prototype Designs in Swift", text: "18 Section", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card4")), color: Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))),
+    Section(title: "Build a SwiftUI App", text: "20 Section", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card2")), color: Color(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1))),
+    Section(title: "SwiftUI Advanced", text: "20 Section", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Background1")), color: Color(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1))),
+]
