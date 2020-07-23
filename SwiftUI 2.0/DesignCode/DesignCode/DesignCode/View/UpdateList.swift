@@ -11,7 +11,7 @@ struct UpdateList: View {
     var body: some View {
         NavigationView {
             List(updateData) { update in
-                NavigationLink(destination: Text(update.text)) {
+                NavigationLink(destination: UpdateDetail(update: update)) {
                     HStack {
                         Image(update.image)
                             .resizable()
@@ -47,6 +47,7 @@ struct UpdateList: View {
 struct UpdateList_Previews: PreviewProvider {
     static var previews: some View {
         UpdateList()
+            .previewDevice("iPhone 11 Pro")
     }
 }
 
