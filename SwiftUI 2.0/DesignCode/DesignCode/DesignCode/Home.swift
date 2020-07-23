@@ -17,26 +17,7 @@ struct Home: View {
             Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
                 .edgesIgnoringSafeArea(.all)
             
-            VStack {
-                HStack {
-                    Text("Watching")
-                        .font(.system(size: 28, weight: .bold))
-                    
-                    Spacer()
-                    
-                    Button(action: {showProfile.toggle()}, label: {
-                        Image("Avatar")
-                            .renderingMode(.original)
-                            .resizable()
-                            .frame(width: 36, height: 36)
-                            .clipShape(Circle())
-                    })
-                }
-                .padding(.horizontal)
-                .padding(.top, 30)
-                
-                Spacer()
-            }
+            HomeView(showProfile: $showProfile)
             .padding(.top, 44)
             .background(Color.white)
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
@@ -52,7 +33,7 @@ struct Home: View {
             
             MenuView()
                 .background(Color.black.opacity(0.001))
-                .offset(y: showProfile ? 0 : 1000)
+                .offset(y: showProfile ? 0 : screen.height)
                 .offset(y: viewState.height)
                 .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
                 .onTapGesture {
@@ -81,3 +62,21 @@ struct Home_Previews: PreviewProvider {
             .previewDevice("iPhone 11 Pro")
     }
 }
+
+struct AvatarView: View {
+    
+    @Binding var showProfile: Bool
+        
+    var body: some View {
+        Button(action: {showProfile.toggle()}, label: {
+            Image("Avatar")
+                .renderingMode(.original)
+                .resizable()
+                .frame(width: 36, height: 36)
+                .clipShape(Circle())
+        })
+    }
+}
+
+let screen = UIScreen.main.bounds
+
