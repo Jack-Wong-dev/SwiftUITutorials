@@ -15,6 +15,8 @@ struct RingView: View {
     var height: CGFloat = 300
     var percent: CGFloat = 88
     
+    @Binding var show: Bool
+    
     var body: some View {
 
         let multipler = width / 44
@@ -27,7 +29,7 @@ struct RingView: View {
                 .frame(width: width, height: height)
             
             Circle()
-                .trim(from: progress, to: 1)
+                .trim(from: show ? progress : 1, to: 1)
                 .stroke(
                     LinearGradient(gradient: Gradient(colors: [Color(color1), Color(color2)]), startPoint: .topTrailing, endPoint: .bottomLeading),
                     style: StrokeStyle(lineWidth: 5 * multipler, lineCap: .round, lineJoin: .round, miterLimit: .infinity, dash: [20,0],
@@ -40,13 +42,16 @@ struct RingView: View {
             Text("\(Int(percent))%")
                 .font(.system(size: 14 * multipler))
                 .fontWeight(.bold)
+                .onTapGesture {
+                    show.toggle()
+                }
         }
     }
 }
 
 struct RingView_Previews: PreviewProvider {
     static var previews: some View {
-        RingView()
+        RingView( show: .constant(true))
             .previewDevice("iPhone 11 Pro")
     }
 }
