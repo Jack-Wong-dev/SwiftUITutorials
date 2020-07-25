@@ -158,12 +158,12 @@
 		0AC2C5EC24C93F9B00D038CB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0AAB9DB424CA79D6009487A6 /* TabBar.swift */,
 				0A2CD36624C7F97A0074D105 /* MenuView.swift */,
 				0A4DF32A24C8EF2C00A30E95 /* Home.swift */,
 				0AC2C5E724C938CD00D038CB /* HomeView.swift */,
 				0A138D3D24C9477800F9FCD1 /* UpdateList.swift */,
 				0AE3F7CF24CA470E00873C0B /* UpdateDetail.swift */,
-				0AAB9DB424CA79D6009487A6 /* TabBar.swift */,
 				0AAB9DB624CA8B24009487A6 /* RingView.swift */,
 				0A6FBFC224CB5F62006EFB76 /* CourseList.swift */,
 				0A2863E224CBB88300FE8ECD /* CourseDetail.swift */,

@@ -17,7 +17,6 @@ struct ContentView: View {
     
     //Like Animation States, drag states can be declared the same way.  Using CGSize to store x and y positions.  Value can be reset using the zero property
     
-    
     var body: some View {
         ZStack {
             
@@ -217,7 +216,7 @@ struct ButtonCardView: View {
                         .lineSpacing(4)
                 }
                 .padding(20)
-                .background(Color.white)
+                .background(Color("background3"))
                 .cornerRadius(20)
                 .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
             }
