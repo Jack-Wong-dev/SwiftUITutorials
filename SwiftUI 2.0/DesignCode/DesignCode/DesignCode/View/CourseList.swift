@@ -10,6 +10,7 @@ import SwiftUI
 struct CourseList: View {
     @State var courses = courseData
     @State var active = false
+    @State var activeIndex = -1
     
     var body: some View {
         ZStack {
@@ -29,8 +30,17 @@ struct CourseList: View {
                     
                     ForEach(courses.indices, id: \.self) { index in
                         GeometryReader { geometry in
-                            CourseView(show: $courses[index].show, course: courses[index], active: $active)
-                                .offset(y: courses[index].show ? -geometry.frame(in: .global).minY : 0)
+                            CourseView(
+                                show: $courses[index].show,
+                                course: courses[index],
+                                active: $active,
+                                index: index,
+                                activeIndex: $activeIndex
+                            )
+                            .offset(y: courses[index].show ? -geometry.frame(in: .global).minY : 0)
+                            .opacity( activeIndex != index && active ? 0 : 1)
+                            .scaleEffect( activeIndex != index && active ? 0.5 : 1)
+                            .offset(x: activeIndex != index && active ? screen.width : 0)
                         }
                         .frame(height: 280)
                         .frame(maxWidth: courses[index].show ? .infinity : screen.width - 60)
@@ -57,6 +67,8 @@ struct CourseView: View {
     @Binding var show: Bool
     var course: Course
     @Binding var active: Bool
+    var index: Int
+    @Binding var activeIndex: Int
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -112,15 +124,20 @@ struct CourseView: View {
             }
             .padding(show ? 30 : 20)
             .padding(.top, show ? 30 : 0)
-    //        .frame(width: show ? screen.width : screen.width - 60, height: show ? screen.height : 280)
+            //        .frame(width: show ? screen.width : screen.width - 60, height: show ? screen.height : 280)
             .frame(maxWidth: show ? .infinity : screen.width - 60, maxHeight: show ? 460 : 280)
-                .background(Color(course.color))
+            .background(Color(course.color))
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
+            .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
             
             .onTapGesture {
                 show.toggle()
                 active.toggle()
+                if show {
+                    activeIndex = index
+                } else {
+                    activeIndex = -1
+                }
             }
         }
         .frame(height: show ? screen.height : 280)
