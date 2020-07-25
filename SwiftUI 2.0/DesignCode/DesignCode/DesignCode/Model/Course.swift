@@ -11,7 +11,7 @@ struct Course: Identifiable {
     var id = UUID()
     var title: String
     var subtitle: String
-    var image: UIImage
+    var image: URL
     var logo: UIImage
     var color: UIColor
     var show: Bool

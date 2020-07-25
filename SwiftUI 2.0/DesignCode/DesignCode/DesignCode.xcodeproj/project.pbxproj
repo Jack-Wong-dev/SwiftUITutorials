@@ -29,6 +29,7 @@
 		0ABF804F24C7935900CFD7AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ABF804E24C7935900CFD7AE /* Preview Assets.xcassets */; };
 		0AC2C5E824C938CD00D038CB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2C5E724C938CD00D038CB /* HomeView.swift */; };
 		0AC2C5EB24C93F6000D038CB /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2C5EA24C93F6000D038CB /* Section.swift */; };
+		0AC7779F24CCE45E00BA2833 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0AC7779E24CCE45E00BA2833 /* SDWebImageSwiftUI */; };
 		0AE3F7D024CA470E00873C0B /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3F7CF24CA470E00873C0B /* UpdateDetail.swift */; };
 		0AE3F7D224CA6FE900873C0B /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3F7D124CA6FE900873C0B /* UpdateStore.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC7779F24CCE45E00BA2833 /* SDWebImageSwiftUI in Frameworks */,
 				0A2863F024CBDC2900FE8ECD /* Contentful in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,6 +188,7 @@
 			name = DesignCode;
 			packageProductDependencies = (
 				0A2863EF24CBDC2900FE8ECD /* Contentful */,
+				0AC7779E24CCE45E00BA2833 /* SDWebImageSwiftUI */,
 			);
 			productName = DesignCode;
 			productReference = 0ABF804424C7935700CFD7AE /* DesignCode.app */;
@@ -216,6 +219,7 @@
 			mainGroup = 0ABF803B24C7935700CFD7AE;
 			packageReferences = (
 				0A2863EE24CBDC2900FE8ECD /* XCRemoteSwiftPackageReference "contentful.swift" */,
+				0AC7779D24CCE45E00BA2833 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 0ABF804524C7935700CFD7AE /* Products */;
 			projectDirPath = "";
@@ -462,6 +466,14 @@
 				minimumVersion = 5.1.1;
 			};
 		};
+		0AC7779D24CCE45E00BA2833 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -469,6 +481,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0A2863EE24CBDC2900FE8ECD /* XCRemoteSwiftPackageReference "contentful.swift" */;
 			productName = Contentful;
+		};
+		0AC7779E24CCE45E00BA2833 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0AC7779D24CCE45E00BA2833 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
