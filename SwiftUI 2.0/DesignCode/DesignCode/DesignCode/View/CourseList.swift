@@ -158,6 +158,12 @@ struct CourseView: View {
                     activeIndex = -1
                 }
             }
+            
+//            if show {
+//                CourseDetail(course: course, show: $show, active: $active, activeIndex: $activeIndex)
+//                    .background(Color.white)
+//                    .animation(nil)
+//            }
         }
         .frame(height: show ? screen.height : 280)
         .scaleEffect(1 - activeView.height / 1000)

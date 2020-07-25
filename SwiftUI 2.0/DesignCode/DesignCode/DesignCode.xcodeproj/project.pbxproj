@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A138D3E24C9477800F9FCD1 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A138D3D24C9477800F9FCD1 /* UpdateList.swift */; };
+		0A2863E324CBB88300FE8ECD /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2863E224CBB88300FE8ECD /* CourseDetail.swift */; };
 		0A2CD36724C7F97A0074D105 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CD36624C7F97A0074D105 /* MenuView.swift */; };
 		0A4DF32B24C8EF2C00A30E95 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4DF32A24C8EF2C00A30E95 /* Home.swift */; };
 		0A6FBFC324CB5F62006EFB76 /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6FBFC224CB5F62006EFB76 /* CourseList.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		0A138D3D24C9477800F9FCD1 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
+		0A2863E224CBB88300FE8ECD /* CourseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
 		0A2CD36624C7F97A0074D105 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		0A4DF32A24C8EF2C00A30E95 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		0A6FBFC224CB5F62006EFB76 /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				0AAB9DB424CA79D6009487A6 /* TabBar.swift */,
 				0AAB9DB624CA8B24009487A6 /* RingView.swift */,
 				0A6FBFC224CB5F62006EFB76 /* CourseList.swift */,
+				0A2863E224CBB88300FE8ECD /* CourseDetail.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				0A138D3E24C9477800F9FCD1 /* UpdateList.swift in Sources */,
 				0AE3F7D224CA6FE900873C0B /* UpdateStore.swift in Sources */,
 				0ABF804A24C7935700CFD7AE /* ContentView.swift in Sources */,
+				0A2863E324CBB88300FE8ECD /* CourseDetail.swift in Sources */,
 				0A2CD36724C7F97A0074D105 /* MenuView.swift in Sources */,
 				0AAB9DBA24CA9A55009487A6 /* Modifiers.swift in Sources */,
 				0AE3F7D024CA470E00873C0B /* UpdateDetail.swift in Sources */,
