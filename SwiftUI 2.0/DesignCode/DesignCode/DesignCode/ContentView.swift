@@ -227,7 +227,7 @@ struct ButtonCardView: View {
         .padding(.top, 8)
         .padding(.horizontal, 20)
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-        .background(Color.white)
+        .background(BlurView(style: .systemThinMaterial))
         .cornerRadius(30)
         .shadow(radius: 20)
     }
