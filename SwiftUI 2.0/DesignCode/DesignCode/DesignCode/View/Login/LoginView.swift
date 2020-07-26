@@ -5,6 +5,7 @@
 //  Created by Jack Wong on 7/26/20.
 //
 import SwiftUI
+import Firebase
 
 struct LoginView: View {
     @State var email = ""
@@ -14,6 +15,33 @@ struct LoginView: View {
     @State var alertMessage = "Something went wrong."
     @State var isLoading = false
     @State var isSuccessful = false
+    
+    func login() {
+        self.hideKeyboard()
+        self.isFocused = false
+        self.isLoading = true
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            self.isLoading = false
+            
+            if error != nil {
+                self.alertMessage = error?.localizedDescription ?? ""
+                self.showAlert = true
+            } else {
+                self.isSuccessful = true
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self.email = ""
+                    self.password = ""
+                    self.isSuccessful = false
+                }
+            }
+        }
+    }
+    
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
     
     var body: some View {
         ZStack {
@@ -44,7 +72,7 @@ struct LoginView: View {
                             .padding(.leading)
                             .frame(height: 44)
                             .onTapGesture {
-                                isFocused = true
+                                self.isFocused = true
                         }
                     }
                     
@@ -66,7 +94,7 @@ struct LoginView: View {
                             .padding(.leading)
                             .frame(height: 44)
                             .onTapGesture {
-                                isFocused = true
+                                self.isFocused = true
                         }
                     }
                 }
@@ -85,7 +113,7 @@ struct LoginView: View {
                     Spacer()
                     
                     Button(action: {
-                        login()
+                        self.login()
                     }) {
                         Text("Log in").foregroundColor(.black)
                     }
@@ -105,44 +133,25 @@ struct LoginView: View {
             .offset(y: isFocused ? -300 : 0)
             .animation(isFocused ? .easeInOut : nil)
             .onTapGesture {
-                isFocused = false
-                hideKeyboard()
+                self.isFocused = false
+                self.hideKeyboard()
             }
             
             if isLoading {
                 LoadingView()
             }
+            
             if isSuccessful {
                 SuccessView()
             }
         }
-    }
-    
-    func login() {
-        hideKeyboard()
-        isFocused = false
-        isLoading = true
-        
-        //Fake API call
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            isLoading = false
-            isSuccessful = true
-//          showAlert = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                isSuccessful = false
-            }
-        }
-    }
-    
-    func hideKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
-            .previewDevice("iPhone 11 Pro")
+//        .previewDevice("iPad Air 2")
     }
 }
 
@@ -181,7 +190,7 @@ struct CoverView: View {
                     .blendMode(.plusDarker)
 //                    .animation(Animation.linear(duration: 120).repeatForever(autoreverses: false))
                     .animation(nil)
-                    .onAppear { show = true }
+                    .onAppear { self.show = true }
                 
                 Image(uiImage: #imageLiteral(resourceName: "Blob"))
                     .offset(x: -200, y: -250)
@@ -203,12 +212,12 @@ struct CoverView: View {
             .rotation3DEffect(Angle(degrees: 5), axis: (x: viewState.width, y: viewState.height, z: 0))
             .gesture(
                 DragGesture().onChanged { value in
-                    viewState = value.translation
-                    isDragging = true
+                    self.viewState = value.translation
+                    self.isDragging = true
                 }
                 .onEnded { value in
-                    viewState = .zero
-                    isDragging = false
+                    self.viewState = .zero
+                    self.isDragging = false
                 }
         )
     }
