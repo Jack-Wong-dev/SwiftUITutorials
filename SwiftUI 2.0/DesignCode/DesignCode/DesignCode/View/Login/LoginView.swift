@@ -12,10 +12,8 @@ struct LoginView: View {
     @State var isFocused = false
     @State var showAlert = false
     @State var alertMessage = "Something went wrong."
-    
-    func hideKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
+    @State var isLoading = false
+    @State var isSuccessful = false
     
     var body: some View {
         ZStack {
@@ -87,9 +85,7 @@ struct LoginView: View {
                     Spacer()
                     
                     Button(action: {
-                        showAlert = true
-                        hideKeyboard()
-                        isFocused = false
+                        login()
                     }) {
                         Text("Log in").foregroundColor(.black)
                     }
@@ -112,7 +108,34 @@ struct LoginView: View {
                 isFocused = false
                 hideKeyboard()
             }
+            
+            if isLoading {
+                LoadingView()
+            }
+            if isSuccessful {
+                SuccessView()
+            }
         }
+    }
+    
+    func login() {
+        hideKeyboard()
+        isFocused = false
+        isLoading = true
+        
+        //Fake API call
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            isLoading = false
+            isSuccessful = true
+//          showAlert = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                isSuccessful = false
+            }
+        }
+    }
+    
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 
