@@ -23,7 +23,7 @@
 		0AAB9DB524CA79D6009487A6 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB9DB424CA79D6009487A6 /* TabBar.swift */; };
 		0AAB9DB724CA8B25009487A6 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB9DB624CA8B24009487A6 /* RingView.swift */; };
 		0AAB9DBA24CA9A55009487A6 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB9DB924CA9A55009487A6 /* Modifiers.swift */; };
-		0AAB9DBC24CA9C7E009487A6 /* Work_Sans in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB9DBB24CA9C7E009487A6 /* Work_Sans */; };
+		0AB10A0B24CDFD8300AB572B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB10A0A24CDFD8300AB572B /* LoadingView.swift */; };
 		0ABF804824C7935700CFD7AE /* DesignCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF804724C7935700CFD7AE /* DesignCodeApp.swift */; };
 		0ABF804A24C7935700CFD7AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABF804924C7935700CFD7AE /* ContentView.swift */; };
 		0ABF804C24C7935900CFD7AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ABF804B24C7935900CFD7AE /* Assets.xcassets */; };
@@ -33,6 +33,20 @@
 		0AC7779F24CCE45E00BA2833 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0AC7779E24CCE45E00BA2833 /* SDWebImageSwiftUI */; };
 		0AC777A124CCE8B200BA2833 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC777A024CCE8B200BA2833 /* BlurView.swift */; };
 		0AC777A324CCFB8700BA2833 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC777A224CCFB8600BA2833 /* Buttons.swift */; };
+		0AD9E93B24CDFAA500149E75 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9E93924CDFAA500149E75 /* loading.json */; };
+		0AD9E93C24CDFAA500149E75 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9E93A24CDFAA500149E75 /* success.json */; };
+		0AD9E94824CDFAF500149E75 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9E93E24CDFAF500149E75 /* WorkSans-Regular.ttf */; };
+		0AD9E94924CDFAF500149E75 /* WorkSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9E93F24CDFAF500149E75 /* WorkSans-Light.ttf */; };
+		0AD9E94A24CDFAF500149E75 /* WorkSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9E94024CDFAF500149E75 /* WorkSans-ExtraBold.ttf */; };
+		0AD9E94B24CDFAF500149E75 /* WorkSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9E94124CDFAF500149E75 /* WorkSans-ExtraLight.ttf */; };
+		0AD9E94C24CDFAF500149E75 /* WorkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9E94224CDFAF500149E75 /* WorkSans-Medium.ttf */; };
+		0AD9E94D24CDFAF500149E75 /* WorkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9E94324CDFAF500149E75 /* WorkSans-SemiBold.ttf */; };
+		0AD9E94E24CDFAF500149E75 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9E94424CDFAF500149E75 /* OFL.txt */; };
+		0AD9E94F24CDFAF500149E75 /* WorkSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9E94524CDFAF500149E75 /* WorkSans-Thin.ttf */; };
+		0AD9E95024CDFAF500149E75 /* WorkSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9E94624CDFAF500149E75 /* WorkSans-Black.ttf */; };
+		0AD9E95124CDFAF500149E75 /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9E94724CDFAF500149E75 /* WorkSans-Bold.ttf */; };
+		0AD9E95424CDFB3300149E75 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0AD9E95324CDFB3300149E75 /* Lottie */; };
+		0AD9E95724CDFBB500149E75 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9E95624CDFBB500149E75 /* LottieView.swift */; };
 		0AE3F7D024CA470E00873C0B /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3F7CF24CA470E00873C0B /* UpdateDetail.swift */; };
 		0AE3F7D224CA6FE900873C0B /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3F7D124CA6FE900873C0B /* UpdateStore.swift */; };
 /* End PBXBuildFile section */
@@ -53,7 +67,7 @@
 		0AAB9DB424CA79D6009487A6 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		0AAB9DB624CA8B24009487A6 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		0AAB9DB924CA9A55009487A6 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
-		0AAB9DBB24CA9C7E009487A6 /* Work_Sans */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Work_Sans; sourceTree = "<group>"; };
+		0AB10A0A24CDFD8300AB572B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0ABF804424C7935700CFD7AE /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ABF804724C7935700CFD7AE /* DesignCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeApp.swift; sourceTree = "<group>"; };
 		0ABF804924C7935700CFD7AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +78,19 @@
 		0AC2C5EA24C93F6000D038CB /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		0AC777A024CCE8B200BA2833 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		0AC777A224CCFB8600BA2833 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		0AD9E93924CDFAA500149E75 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		0AD9E93A24CDFAA500149E75 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
+		0AD9E93E24CDFAF500149E75 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
+		0AD9E93F24CDFAF500149E75 /* WorkSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Light.ttf"; sourceTree = "<group>"; };
+		0AD9E94024CDFAF500149E75 /* WorkSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		0AD9E94124CDFAF500149E75 /* WorkSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		0AD9E94224CDFAF500149E75 /* WorkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Medium.ttf"; sourceTree = "<group>"; };
+		0AD9E94324CDFAF500149E75 /* WorkSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		0AD9E94424CDFAF500149E75 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		0AD9E94524CDFAF500149E75 /* WorkSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Thin.ttf"; sourceTree = "<group>"; };
+		0AD9E94624CDFAF500149E75 /* WorkSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Black.ttf"; sourceTree = "<group>"; };
+		0AD9E94724CDFAF500149E75 /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.ttf"; sourceTree = "<group>"; };
+		0AD9E95624CDFBB500149E75 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		0AE3F7CF24CA470E00873C0B /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 		0AE3F7D124CA6FE900873C0B /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +102,7 @@
 			files = (
 				0AC7779F24CCE45E00BA2833 /* SDWebImageSwiftUI in Frameworks */,
 				0A2863F024CBDC2900FE8ECD /* Contentful in Frameworks */,
+				0AD9E95424CDFB3300149E75 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +169,8 @@
 				0ABF804724C7935700CFD7AE /* DesignCodeApp.swift */,
 				0ABF804924C7935700CFD7AE /* ContentView.swift */,
 				0ABF804B24C7935900CFD7AE /* Assets.xcassets */,
-				0AAB9DBB24CA9C7E009487A6 /* Work_Sans */,
+				0AD9E93D24CDFAF500149E75 /* Work_Sans */,
+				0AD9E93824CDFAA500149E75 /* Lottie */,
 				0ABF805024C7935900CFD7AE /* Info.plist */,
 				0ABF804D24C7935900CFD7AE /* Preview Content */,
 			);
@@ -170,6 +199,7 @@
 		0AC2C5EC24C93F9B00D038CB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0AD9E95824CDFBD700149E75 /* UIRepresentable */,
 				0AA1961F24CDE8F50052D543 /* Login */,
 				0AC777A424CCFB8B00BA2833 /* Neumorphic */,
 				0AAB9DB424CA79D6009487A6 /* TabBar.swift */,
@@ -182,7 +212,6 @@
 				0A6FBFC224CB5F62006EFB76 /* CourseList.swift */,
 				0A2863E224CBB88300FE8ECD /* CourseDetail.swift */,
 				0A2863E724CBD30A00FE8ECD /* PostList.swift */,
-				0AC777A024CCE8B200BA2833 /* BlurView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,6 +222,42 @@
 				0AC777A224CCFB8600BA2833 /* Buttons.swift */,
 			);
 			path = Neumorphic;
+			sourceTree = "<group>";
+		};
+		0AD9E93824CDFAA500149E75 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				0AD9E93924CDFAA500149E75 /* loading.json */,
+				0AD9E93A24CDFAA500149E75 /* success.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		0AD9E93D24CDFAF500149E75 /* Work_Sans */ = {
+			isa = PBXGroup;
+			children = (
+				0AD9E93E24CDFAF500149E75 /* WorkSans-Regular.ttf */,
+				0AD9E93F24CDFAF500149E75 /* WorkSans-Light.ttf */,
+				0AD9E94024CDFAF500149E75 /* WorkSans-ExtraBold.ttf */,
+				0AD9E94124CDFAF500149E75 /* WorkSans-ExtraLight.ttf */,
+				0AD9E94224CDFAF500149E75 /* WorkSans-Medium.ttf */,
+				0AD9E94324CDFAF500149E75 /* WorkSans-SemiBold.ttf */,
+				0AD9E94424CDFAF500149E75 /* OFL.txt */,
+				0AD9E94524CDFAF500149E75 /* WorkSans-Thin.ttf */,
+				0AD9E94624CDFAF500149E75 /* WorkSans-Black.ttf */,
+				0AD9E94724CDFAF500149E75 /* WorkSans-Bold.ttf */,
+			);
+			path = Work_Sans;
+			sourceTree = "<group>";
+		};
+		0AD9E95824CDFBD700149E75 /* UIRepresentable */ = {
+			isa = PBXGroup;
+			children = (
+				0AD9E95624CDFBB500149E75 /* LottieView.swift */,
+				0AC777A024CCE8B200BA2833 /* BlurView.swift */,
+				0AB10A0A24CDFD8300AB572B /* LoadingView.swift */,
+			);
+			path = UIRepresentable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +279,7 @@
 			packageProductDependencies = (
 				0A2863EF24CBDC2900FE8ECD /* Contentful */,
 				0AC7779E24CCE45E00BA2833 /* SDWebImageSwiftUI */,
+				0AD9E95324CDFB3300149E75 /* Lottie */,
 			);
 			productName = DesignCode;
 			productReference = 0ABF804424C7935700CFD7AE /* DesignCode.app */;
@@ -245,6 +311,7 @@
 			packageReferences = (
 				0A2863EE24CBDC2900FE8ECD /* XCRemoteSwiftPackageReference "contentful.swift" */,
 				0AC7779D24CCE45E00BA2833 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				0AD9E95224CDFB3300149E75 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 0ABF804524C7935700CFD7AE /* Products */;
 			projectDirPath = "";
@@ -260,9 +327,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AD9E95024CDFAF500149E75 /* WorkSans-Black.ttf in Resources */,
+				0AD9E93C24CDFAA500149E75 /* success.json in Resources */,
+				0AD9E94E24CDFAF500149E75 /* OFL.txt in Resources */,
+				0AD9E94924CDFAF500149E75 /* WorkSans-Light.ttf in Resources */,
+				0AD9E94A24CDFAF500149E75 /* WorkSans-ExtraBold.ttf in Resources */,
 				0ABF804F24C7935900CFD7AE /* Preview Assets.xcassets in Resources */,
+				0AD9E94B24CDFAF500149E75 /* WorkSans-ExtraLight.ttf in Resources */,
+				0AD9E94D24CDFAF500149E75 /* WorkSans-SemiBold.ttf in Resources */,
 				0ABF804C24C7935900CFD7AE /* Assets.xcassets in Resources */,
-				0AAB9DBC24CA9C7E009487A6 /* Work_Sans in Resources */,
+				0AD9E93B24CDFAA500149E75 /* loading.json in Resources */,
+				0AD9E94F24CDFAF500149E75 /* WorkSans-Thin.ttf in Resources */,
+				0AD9E94C24CDFAF500149E75 /* WorkSans-Medium.ttf in Resources */,
+				0AD9E94824CDFAF500149E75 /* WorkSans-Regular.ttf in Resources */,
+				0AD9E95124CDFAF500149E75 /* WorkSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,11 +369,13 @@
 				0AC2C5EB24C93F6000D038CB /* Section.swift in Sources */,
 				0AC2C5E824C938CD00D038CB /* HomeView.swift in Sources */,
 				0ABF804824C7935700CFD7AE /* DesignCodeApp.swift in Sources */,
+				0AB10A0B24CDFD8300AB572B /* LoadingView.swift in Sources */,
 				0AAB9DB524CA79D6009487A6 /* TabBar.swift in Sources */,
 				0A2863E824CBD30A00FE8ECD /* PostList.swift in Sources */,
 				0A6FBFC324CB5F62006EFB76 /* CourseList.swift in Sources */,
 				0A2863F224CBDEFF00FE8ECD /* CourseStore.swift in Sources */,
 				0A2863E624CBD12400FE8ECD /* Api.swift in Sources */,
+				0AD9E95724CDFBB500149E75 /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"DesignCode/Preview Content\"";
 				DEVELOPMENT_TEAM = 8FR9D6557V;
 				ENABLE_PREVIEWS = YES;
@@ -446,6 +527,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"DesignCode/Preview Content\"";
 				DEVELOPMENT_TEAM = 8FR9D6557V;
 				ENABLE_PREVIEWS = YES;
@@ -502,6 +584,14 @@
 				minimumVersion = 1.5.0;
 			};
 		};
+		0AD9E95224CDFB3300149E75 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.8;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -514,6 +604,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0AC7779D24CCE45E00BA2833 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		0AD9E95324CDFB3300149E75 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0AD9E95224CDFB3300149E75 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
