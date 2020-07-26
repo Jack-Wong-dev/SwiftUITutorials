@@ -14,7 +14,8 @@ struct DesignCodeApp: App {
 //            TabBar()
 //            PostList()
 //            CourseList()
-            Buttons()
+//            Buttons()
+            LoginView()
         }
     }
 }
