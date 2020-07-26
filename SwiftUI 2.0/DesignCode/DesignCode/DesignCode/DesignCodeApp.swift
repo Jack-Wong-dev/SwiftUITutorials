@@ -13,7 +13,8 @@ struct DesignCodeApp: App {
         WindowGroup {
 //            TabBar()
 //            PostList()
-            CourseList()
+//            CourseList()
+            Buttons()
         }
     }
 }
