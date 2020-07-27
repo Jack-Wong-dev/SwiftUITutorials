@@ -13,6 +13,12 @@ struct HomeView: View {
     @State var showUpdate = false
     @Binding var viewState: CGSize
     
+    @ObservedObject var store = CourseStore()
+    @State var active = false
+    @State var activeIndex = -1
+    @State var activeView = CGSize.zero
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
     var body: some View {
         GeometryReader { bounds in
             ScrollView {
@@ -27,7 +33,7 @@ struct HomeView: View {
                         AvatarView(showProfile: $showProfile)
                         Button(action: {showUpdate.toggle()}) {
                             Image(systemName: "bell")
-    //                            .renderingMode(.original)
+                                //                            .renderingMode(.original)
                                 .foregroundColor(.primary)
                                 .font(.system(size: 16, weight: .medium))
                                 .frame(width: 36, height: 36)
@@ -43,6 +49,7 @@ struct HomeView: View {
                     .padding(.horizontal)
                     .padding(.leading, 14)
                     .padding(.top, 30)
+                    .blur(radius: active ? 20 : 0)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         WatchRingsView()
@@ -52,6 +59,8 @@ struct HomeView: View {
                                 showContent = true
                             }
                     }
+                    .blur(radius: active ? 20 : 0)
+
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 20) {
@@ -70,6 +79,7 @@ struct HomeView: View {
                         .padding(.bottom, 30)
                     }
                     .offset(y: -30)
+                    .blur(radius: active ? 20 : 0)
                     
                     HStack {
                         Text("Courses")
@@ -78,10 +88,32 @@ struct HomeView: View {
                     }
                     .padding(.leading, 30)
                     .offset(y: -60)
+                    .blur(radius: active ? 20 : 0)
                     
-                    SectionView(section: sectionData[2], width: bounds.size.width - 60, height: 275)
-                        .offset(y: -60)
-                    
+                    VStack(spacing: 30.0) {
+                        ForEach(store.courses.indices, id: \.self) { index in
+                            GeometryReader { geometry in
+                                CourseView(
+                                    show: $store.courses[index].show,
+                                    course: store.courses[index],
+                                    active: $active,
+                                    index: index,
+                                    activeIndex: $activeIndex,
+                                    activeView: $activeView,
+                                    bounds: bounds
+                                )
+                                .offset(y: store.courses[index].show ? -geometry.frame(in: .global).minY : 0)
+                                .opacity(activeIndex != index && active ? 0 : 1)
+                                .scaleEffect(activeIndex != index && active ? 0.5 : 1)
+                                .offset(x: activeIndex != index && active ? bounds.size.width : 0)
+                            }
+                            .frame(height: horizontalSizeClass == .regular ? 80 : 280)
+                            .frame(maxWidth: store.courses[index].show ? 712 : getCardWith(bounds: bounds))
+                            .zIndex(store.courses[index].show ? 1 : 0)
+                        }
+                    }
+                    .padding(.bottom, 300)
+                    .offset(y: -60)     //because of the horizontal scroll view was clipping the shadow, we need to push the bottom content
                     
                     Spacer()
                 }

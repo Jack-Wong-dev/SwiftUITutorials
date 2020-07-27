@@ -27,9 +27,11 @@ struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             TabBar()
+                .environmentObject(UserStore())
                 .preferredColorScheme(.dark)
                 .previewDevice("iPhone 11 Pro Max")
             TabBar()
+                .environmentObject(UserStore())
                 .previewDevice("iPhone 11 Pro Max")
         }
     }
