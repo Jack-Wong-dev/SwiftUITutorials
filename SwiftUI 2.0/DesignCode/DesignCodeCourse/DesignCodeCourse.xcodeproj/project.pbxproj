@@ -25,6 +25,8 @@
 		0A4847A324CF80D0003CB61F /* CourseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48479624CF80D0003CB61F /* CourseSection.swift */; };
 		0A4847A424CF80D0003CB61F /* TutorialSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48479724CF80D0003CB61F /* TutorialSection.swift */; };
 		0A4847A524CF80D0003CB61F /* TutorialSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48479724CF80D0003CB61F /* TutorialSection.swift */; };
+		0A4847A724CF83A7003CB61F /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4847A624CF83A7003CB61F /* VisualEffectBlur.swift */; };
+		0A4847A924CF83B5003CB61F /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4847A824CF83B5003CB61F /* VisualEffectBlur.swift */; };
 		0AF8869D24CF4EFD0001FAA9 /* DesignCodeCourseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8868A24CF4EFB0001FAA9 /* DesignCodeCourseApp.swift */; };
 		0AF8869E24CF4EFD0001FAA9 /* DesignCodeCourseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8868A24CF4EFB0001FAA9 /* DesignCodeCourseApp.swift */; };
 		0AF8869F24CF4EFD0001FAA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8868B24CF4EFB0001FAA9 /* ContentView.swift */; };
@@ -55,6 +57,8 @@
 		0A48479524CF80D0003CB61F /* GradientModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientModel.swift; sourceTree = "<group>"; };
 		0A48479624CF80D0003CB61F /* CourseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseSection.swift; sourceTree = "<group>"; };
 		0A48479724CF80D0003CB61F /* TutorialSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialSection.swift; sourceTree = "<group>"; };
+		0A4847A624CF83A7003CB61F /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
+		0A4847A824CF83B5003CB61F /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		0AF8868A24CF4EFB0001FAA9 /* DesignCodeCourseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeCourseApp.swift; sourceTree = "<group>"; };
 		0AF8868B24CF4EFB0001FAA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0AF8868C24CF4EFD0001FAA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 		0AF8869324CF4EFD0001FAA9 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				0A4847A624CF83A7003CB61F /* VisualEffectBlur.swift */,
 				0AF8869424CF4EFD0001FAA9 /* Info.plist */,
 			);
 			path = iOS;
@@ -135,6 +140,7 @@
 		0AF8869A24CF4EFD0001FAA9 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				0A4847A824CF83B5003CB61F /* VisualEffectBlur.swift */,
 				0AF8869B24CF4EFD0001FAA9 /* Info.plist */,
 				0AF8869C24CF4EFD0001FAA9 /* macOS.entitlements */,
 			);
@@ -286,6 +292,7 @@
 				0A48479A24CF80D0003CB61F /* Download.swift in Sources */,
 				0AF886B824CF52A40001FAA9 /* CourseRow.swift in Sources */,
 				0A4847A424CF80D0003CB61F /* TutorialSection.swift in Sources */,
+				0A4847A724CF83A7003CB61F /* VisualEffectBlur.swift in Sources */,
 				0AF886C024CF5B860001FAA9 /* CourseList.swift in Sources */,
 				0A4847A024CF80D0003CB61F /* GradientModel.swift in Sources */,
 			);
@@ -310,6 +317,7 @@
 				0A48479B24CF80D0003CB61F /* Download.swift in Sources */,
 				0AF886B924CF52A40001FAA9 /* CourseRow.swift in Sources */,
 				0A4847A524CF80D0003CB61F /* TutorialSection.swift in Sources */,
+				0A4847A924CF83B5003CB61F /* VisualEffectBlur.swift in Sources */,
 				0AF886C124CF5B860001FAA9 /* CourseList.swift in Sources */,
 				0A4847A124CF80D0003CB61F /* GradientModel.swift in Sources */,
 			);
