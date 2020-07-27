@@ -17,12 +17,16 @@ struct CoursesView: View {
         //Card to Full Screen ScrollView (with list) and vice versa
         ZStack {
             ScrollView {
-                VStack(spacing: 20.0) {
+//            /*Fits as many 160 size items with gap value (spacing: 16 between columns), with 16 spacing between rows */
+                LazyVGrid(
+                    columns: [ GridItem(.adaptive(minimum: 160),spacing: 16)],
+                    spacing: 16
+                ) {
                     //Cards
                     ForEach(courses) { item in
                         CourseItem(course: item) //Matched Geometry Effect always before frame. isSource is optional, helps determine where to animation from.  e.g. Card to Other Card, Other Card to Card
                             .matchedGeometryEffect(id: item.id, in: namespace, isSource: !show)
-                            .frame(width: 335, height: 250)
+                            .frame(height: 200)
                             .onTapGesture {
                                 /* withAnimation is preferred over .animation when Matched Geoemetry Effect is involved.
                                  .animation creates lag (may change in the future), here the card behind would try to play catch up instead of being directly behind */
@@ -35,6 +39,7 @@ struct CoursesView: View {
                             .disabled(isDisabled) //Tap anymore after tapping the card
                     }
                 }
+                .padding(16)
                 .frame(maxWidth: .infinity)
             }
             
