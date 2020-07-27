@@ -34,7 +34,8 @@ struct ContentView: View {
             
             //Cards underneath
             BackCardView()
-                .frame(width: showCard ? 300 : 340, height: 220)
+                .frame(maxWidth: showCard ? 300 : 340)
+                .frame(height: 220)
                 .background(Color("card4"))
                 .cornerRadius(20)
                 .shadow(radius: 20)
@@ -53,7 +54,8 @@ struct ContentView: View {
             
             
             BackCardView()
-                .frame(width: 340, height: 220)
+                .frame(maxWidth: 340)
+                .frame(height: 220)
                 .background( show ? Color("card3") : Color("card4"))
                 .cornerRadius(20)
                 .shadow(radius: 20)
@@ -72,7 +74,8 @@ struct ContentView: View {
             
             //Card
             CardView()
-                .frame(width: showCard ? 370 : 340, height: 220)
+                .frame(maxWidth: showCard ? 370 : 340)
+                .frame(height: 220)
                 .background(Color.black)
                 .clipShape(RoundedRectangle(cornerRadius: showCard ? 30 : 20, style: .continuous)) //Expand/Shrink effect
                 //                .cornerRadius(20)
@@ -99,42 +102,52 @@ struct ContentView: View {
             //Debug View
 //            Text("\(bottomState.height)").offset(y: -300)
             
-            ButtonCardView(show: $showCard)
-                .offset(x: 0, y: showCard ? 360 : 1000)
-                .offset(y: bottomState.height)
-                .blur(radius: show ? 20 : 0)
-                .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
-                .gesture(
-                    DragGesture().onChanged { value in
-                        bottomState = value.translation
-                        if showFull {
-                            bottomState.height += -300
+            GeometryReader { bounds in
+                ButtonCardView(show: $showCard)
+                    .offset(x: 0, y: showCard ? bounds.size.height/2 :
+                                bounds.size.height +
+                                bounds.safeAreaInsets.top +
+                                bounds.safeAreaInsets.bottom) //Using Geometry reader detect the size of the status bar and home indicator
+                    .offset(y: bottomState.height)
+                    .blur(radius: show ? 20 : 0)
+                    .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
+                    .gesture(
+                        DragGesture().onChanged { value in
+                            bottomState = value.translation
+                            if showFull {
+                                bottomState.height += -300
+                            }
+                            if bottomState.height < -300 {  //Maximum drag
+                                bottomState.height = -300  //snaps to that anchor, card would not go above that
+                            }
                         }
-                        if bottomState.height < -300 {  //Maximum drag
-                            bottomState.height = -300  //snaps to that anchor, card would not go above that
+                        .onEnded { value in
+                            if bottomState.height > 50 {
+                                showCard = false
+                            }
+                            if (bottomState.height < -100  && !showFull) || (bottomState.height < -250 && showFull) {
+                                bottomState.height = -300
+                                showFull = true
+                            } else {
+                                bottomState = .zero
+                                showFull = false
+                            }
                         }
-                    }
-                    .onEnded { value in
-                        if bottomState.height > 50 {
-                            showCard = false
-                        }
-                        if (bottomState.height < -100  && !showFull) || (bottomState.height < -250 && showFull) {
-                            bottomState.height = -300
-                            showFull = true
-                        } else {
-                            bottomState = .zero
-                            showFull = false
-                        }
-                    }
                 )
+            }
+//            .edgesIgnoringSafeArea(.all)
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            .previewDevice("iPhone 11 Pro")
+        Group {
+            ContentView()
+                .previewDevice("iPhone 11 Pro")
+            ContentView()
+                .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/320.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/667.0/*@END_MENU_TOKEN@*/))
+        }
     }
 }
 
@@ -184,6 +197,9 @@ struct TitleView: View {
             }
             .padding(.all)
             Image("Background1")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(maxWidth: 375)
             Spacer()
         }
     }
@@ -225,9 +241,10 @@ struct ButtonCardView: View {
         }
         .padding(.top, 8)
         .padding(.horizontal, 20)
-        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+        .frame(maxWidth: 712)
         .background(BlurView(style: .systemThinMaterial))
         .cornerRadius(30)
         .shadow(radius: 20)
+        .frame(maxWidth: .infinity)  //Geometry reader doesn't align the same way stacks do, hence why another frame modifier after shadow is required
     }
 }
