@@ -75,9 +75,9 @@
 		0AF8868924CF4EFB0001FAA9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				0AF886C524CF6A550001FAA9 /* Model */,
 				0AF8868A24CF4EFB0001FAA9 /* DesignCodeCourseApp.swift */,
 				0AF886BD24CF5AF10001FAA9 /* Navigation */,
+				0AF886C524CF6A550001FAA9 /* Model */,
 				0AF886BE24CF5B030001FAA9 /* Items */,
 				0AF8868B24CF4EFB0001FAA9 /* ContentView.swift */,
 				0AF8868C24CF4EFD0001FAA9 /* Assets.xcassets */,

@@ -10,6 +10,8 @@ import SwiftUI
 struct CoursesView: View {
     @State var show = false
     @Namespace var namespace //Set a collection of matched elements
+    @State var selectedItem : Course? = nil
+    @State var isDisabled = false
     
     var body: some View {
         //Card to Full Screen ScrollView (with list) and vice versa
@@ -20,18 +22,39 @@ struct CoursesView: View {
                         CourseItem(course: item) //Matched Geometry Effect always before frame. isSource is optional, helps determine where to animation from.  e.g. Card to Other Card, Other Card to Card
                             .matchedGeometryEffect(id: item.id, in: namespace, isSource: !show)
                             .frame(width: 335, height: 250)
+                            .onTapGesture {
+                                /* withAnimation is preferred over .animation when Matched Geoemetry Effect is involved.
+                                 .animation creates lag (may change in the future), here the card behind would try to play catch up instead of being directly behind */
+                                withAnimation(.spring()) {
+                                    show.toggle()
+                                    selectedItem = item
+                                    isDisabled = true
+                                }
+                            }
+                            .disabled(isDisabled) //Tap anymore after tapping the card
                     }
-                    
                 }
                 .frame(maxWidth: .infinity)
             }
             
-            if show {
+            if selectedItem != nil {
                 //Full Screen
                 ScrollView {
-                    CourseItem(course: courses[0])
-                        .matchedGeometryEffect(id: courses[0].id, in: namespace) //always must be before frame
+                    CourseItem(course: selectedItem!)
+                        .matchedGeometryEffect(id: selectedItem!.id, in: namespace) //always must be before frame
                         .frame(height: 300)
+                        .onTapGesture {
+                            withAnimation(.spring()) {
+                                show.toggle()
+                                selectedItem = nil
+                                /*tapping too fast will reveal that selectedItem change before than the animation is over
+                                 Used DispatchQueue to prevent breaking the UI
+                                 */
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                    isDisabled = false
+                                }
+                            }
+                        }
                     
                     //Content
                     VStack {
@@ -56,15 +79,6 @@ struct CoursesView: View {
                 .edgesIgnoringSafeArea(.all)
             }
         }
-        
-        .onTapGesture {
-            /* withAnimation is preferred over .animation when Matched Geoemetry Effect is involved.
-             .animation creates lag (may change in the future), here the card behind would try to play catch up instead of being directly behind */
-            withAnimation(.spring()) {
-                show.toggle()
-            }
-        }
-        //        .animation(.spring())
     }
 }
 
