@@ -32,33 +32,54 @@ struct CoursesView: View {
     
     var content: some View {
         ScrollView {
-        /*Fits as many 160 size items with gap value (spacing: 16 between columns), with 16 spacing between rows */
-            LazyVGrid(
-                columns: [ GridItem(.adaptive(minimum: 160),spacing: 16)],
-                spacing: 16
-            ) {
-                //Cards
-                ForEach(courses) { item in
-                    VStack {
-                        CourseItem(course: item) //Matched Geometry Effect always before frame. isSource is optional, helps determine where to animation from.  e.g. Card to Other Card, Other Card to Card
-                            .matchedGeometryEffect(id: item.id, in: namespace, isSource: !show)
-                            .frame(height: 200)
-                            .onTapGesture {
-                                /* withAnimation is preferred over .animation when Matched Geoemetry Effect is involved.
-                                 .animation creates lag (may change in the future), here the card behind would try to play catch up instead of being directly behind */
-                                withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0)) {
-                                    show.toggle()
-                                    selectedItem = item
-                                    isDisabled = true
+            VStack(spacing: 0) {
+                Text("Courses")
+                    .font(.largeTitle)
+                    .bold()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading, 16)
+                    .padding(.top, 54)
+                
+                /*Fits as many 160 size items with gap value (spacing: 16 between columns), with 16 spacing between rows */
+                LazyVGrid(
+                    columns: [ GridItem(.adaptive(minimum: 160),spacing: 16)],
+                    spacing: 16
+                ) {
+                    //Cards
+                    ForEach(courses) { item in
+                        VStack {
+                            CourseItem(course: item) //Matched Geometry Effect always before frame. isSource is optional, helps determine where to animation from.  e.g. Card to Other Card, Other Card to Card
+                                .matchedGeometryEffect(id: item.id, in: namespace, isSource: !show)
+                                .frame(height: 200)
+                                .onTapGesture {
+                                    /* withAnimation is preferred over .animation when Matched Geoemetry Effect is involved.
+                                     .animation creates lag (may change in the future), here the card behind would try to play catch up instead of being directly behind */
+                                    withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0)) {
+                                        show.toggle()
+                                        selectedItem = item
+                                        isDisabled = true
+                                    }
                                 }
-                            }
-                            .disabled(isDisabled)  //Disable card
+                                .disabled(isDisabled)  //Disable card
+                        }
+                        .matchedGeometryEffect(id: "container\(item.id)", in: namespace, isSource: !show)
                     }
-                    .matchedGeometryEffect(id: "container\(item.id)", in: namespace, isSource: !show)
                 }
+                .padding(16)
+                .frame(maxWidth: .infinity)
+                
+                Text("Latest Sections")
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+                
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 240))]) {
+                    ForEach(courseSections) { item in
+                        CourseRow()
+                    }
+                }
+                .padding()
             }
-            .padding(16)
-            .frame(maxWidth: .infinity)
         }
         .zIndex(1)
     }

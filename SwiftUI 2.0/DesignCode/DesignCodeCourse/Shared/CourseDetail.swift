@@ -33,7 +33,6 @@ struct CourseDetail: View {
                     .matchedGeometryEffect(id: course.id, in: namespace) //always must be before frame
                     .frame(height: 300)
                 
-                //Content
                 VStack {
                     ForEach(courseSections) { item in
                         CourseRow(item: item)

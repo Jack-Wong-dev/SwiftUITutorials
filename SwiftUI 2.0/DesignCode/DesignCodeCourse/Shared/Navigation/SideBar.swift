@@ -29,6 +29,7 @@ struct SideBar: View {
                     }
                 })
             #endif
+            
             CoursesView()
         }
     }
