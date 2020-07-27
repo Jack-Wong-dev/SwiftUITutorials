@@ -18,6 +18,7 @@ struct CoursesView: View {
         ZStack {
             ScrollView {
                 VStack(spacing: 20.0) {
+                    //Cards
                     ForEach(courses) { item in
                         CourseItem(course: item) //Matched Geometry Effect always before frame. isSource is optional, helps determine where to animation from.  e.g. Card to Other Card, Other Card to Card
                             .matchedGeometryEffect(id: item.id, in: namespace, isSource: !show)
