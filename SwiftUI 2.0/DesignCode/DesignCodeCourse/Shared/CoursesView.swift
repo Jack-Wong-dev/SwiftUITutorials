@@ -12,17 +12,27 @@ struct CoursesView: View {
     @Namespace var namespace //Set a collection of matched elements
     
     var body: some View {
+        //Card to Full Screen ScrollView (with list) and vice versa
         ZStack {
-            CourseItem()
-                .matchedGeometryEffect(id: "Card", in: namespace, isSource: !show) //always must be before frame
-                .frame(width: 335, height: 250)
+            ScrollView {
+                VStack(spacing: 20.0) {
+                    CourseItem() //Matched Geometry Effect always before frame. isSource is optional, helps determine where to animation from.  e.g. Card to Other Card, Other Card to Card
+                        .matchedGeometryEffect(id: "Card", in: namespace, isSource: !show)
+                        .frame(width: 335, height: 250)
+
+                    CourseItem()
+                        .frame(width: 335, height: 250)
+                }
+                .frame(maxWidth: .infinity)
+            }
             VStack {
                 if show {
                     ScrollView {
                         CourseItem()
                             .matchedGeometryEffect(id: "Card", in: namespace) //always must be before frame
                             .frame(height: 300)
-    
+                        
+                        //Content
                         VStack {
                             ForEach(0 ..< 20) { item in
                                 CourseRow()
@@ -30,14 +40,25 @@ struct CoursesView: View {
                         }
                         .padding()
                     }
-                    .transition(.opacity)
+                    .background(Color("Background 1"))
+                    .transition(
+                        .asymmetric(
+                            insertion: AnyTransition
+                                        .opacity
+                                        .animation(Animation.spring().delay(0.3)),
+                            removal: AnyTransition
+                                .opacity
+                                .animation(.spring()))
+                        
+                        /* Content shows up 0.3 seconds after the transition from card to scrollview.  .asymmetric is required so that the delay doesn't apply when going from scrollview to card */
+                    )
                     .edgesIgnoringSafeArea(.all)
                 }
             }
         }
         .onTapGesture {
-            //withAnimation is preferred over .animation when Matched Geoemetry Effect is involved.
-            //.animation creates lag, here the card behind would try to play catch up instead of being directly behind
+            /* withAnimation is preferred over .animation when Matched Geoemetry Effect is involved.
+            .animation creates lag (may change in the future), here the card behind would try to play catch up instead of being directly behind */
             withAnimation(.spring()) {
                 show.toggle()
             }
