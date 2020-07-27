@@ -37,6 +37,8 @@ struct LoginView: View {
                     self.password = ""
                     self.isSuccessful = false
                     user.showLogin = false
+                    
+                    UserDefaults.standard.setValue(true, forKeyPath: "isLogged")
                 }
             }
         }
@@ -154,7 +156,7 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
-//        .previewDevice("iPad Air 2")
+            .previewDevice("iPhone 11 Pro")
     }
 }
 
