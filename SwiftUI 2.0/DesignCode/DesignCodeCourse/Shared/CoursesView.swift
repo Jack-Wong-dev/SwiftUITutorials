@@ -50,35 +50,8 @@ struct CoursesView: View {
             if selectedItem != nil {
                 //Full Screen
                 ZStack(alignment: .topTrailing) {
-                    VStack {
-                        ScrollView {
-                            CourseItem(course: selectedItem!)
-                                .matchedGeometryEffect(id: selectedItem!.id, in: namespace) //always must be before frame
-                                .frame(height: 300)
-                            
-                            //Content
-                            VStack {
-                                ForEach(0 ..< 20) { item in
-                                    CourseRow()
-                                }
-                            }
-                            .padding()
-                        }
-                    }
-                    .background(Color("Background 1"))
-                    .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
-                    .matchedGeometryEffect(id: "container\(selectedItem!.id)", in: namespace)
-                    //                .transition(
-                    //                    /* Content shows up 0.3 seconds after the transition from card to scrollview.  .asymmetric is required so that the delay doesn't apply when going from scrollview to card */
-                    //                    .asymmetric(
-                    //                        insertion: AnyTransition
-                    //                            .opacity
-                    //                            .animation(Animation.spring().delay(0.3)),
-                    //                        removal: AnyTransition
-                    //                            .opacity
-                    //                            .animation(.spring()))
-                    //                )
-                    .edgesIgnoringSafeArea(.all)
+                    
+                    CourseDetail(course: selectedItem!, namespace: namespace)
                     
                     CloseButton()
                         .padding(.trailing, 16)
