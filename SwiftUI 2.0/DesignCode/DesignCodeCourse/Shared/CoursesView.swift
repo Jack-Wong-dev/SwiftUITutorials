@@ -12,6 +12,7 @@ struct CoursesView: View {
     @Namespace var namespace //Set a collection of matched elements
     @State var selectedItem : Course? = nil
     @State var isDisabled = false
+    @Namespace var namespace2
     
     var body: some View {
         //Card to Full Screen ScrollView (with list) and vice versa
@@ -75,7 +76,14 @@ struct CoursesView: View {
                 
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 240))]) {
                     ForEach(courseSections) { item in
-                        CourseRow()
+                        
+                        #if os(iOS)
+                        NavigationLink(destination: CourseDetail(namespace: namespace2)) {
+                            CourseRow(item: item)
+                        }
+                        #else
+                        CourseRow(item:item)
+                        #endif
                     }
                 }
                 .padding()
