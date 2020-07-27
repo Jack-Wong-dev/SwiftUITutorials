@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06DDC96405273CAC80A30F79 /* Pods_DesignCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC309991EE00D3E022AD197 /* Pods_DesignCode.framework */; };
 		0A138D3E24C9477800F9FCD1 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A138D3D24C9477800F9FCD1 /* UpdateList.swift */; };
 		0A1EEB1F24CE4F8B007BAB31 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1EEB1E24CE4F8B007BAB31 /* UserStore.swift */; };
 		0A2863E324CBB88300FE8ECD /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2863E224CBB88300FE8ECD /* CourseDetail.swift */; };
@@ -15,7 +14,7 @@
 		0A2863E824CBD30A00FE8ECD /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2863E724CBD30A00FE8ECD /* PostList.swift */; };
 		0A2863EA24CBD34400FE8ECD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2863E924CBD34400FE8ECD /* Post.swift */; };
 		0A2863ED24CBD79500FE8ECD /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2863EC24CBD79500FE8ECD /* DataStore.swift */; };
-		0A2863F024CBDC2900FE8ECD /* Contentful in Frameworks */ = {isa = PBXBuildFile; productRef = 0A2863EF24CBDC2900FE8ECD /* Contentful */; };
+		0A2863F024CBDC2900FE8ECD /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 0A2863EF24CBDC2900FE8ECD /* SwiftPackageProductDependency */; };
 		0A2863F224CBDEFF00FE8ECD /* CourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2863F124CBDEFF00FE8ECD /* CourseStore.swift */; };
 		0A2CD36724C7F97A0074D105 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CD36624C7F97A0074D105 /* MenuView.swift */; };
 		0A4DF32B24C8EF2C00A30E95 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4DF32A24C8EF2C00A30E95 /* Home.swift */; };
@@ -34,7 +33,7 @@
 		0ABF804F24C7935900CFD7AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ABF804E24C7935900CFD7AE /* Preview Assets.xcassets */; };
 		0AC2C5E824C938CD00D038CB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2C5E724C938CD00D038CB /* HomeView.swift */; };
 		0AC2C5EB24C93F6000D038CB /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2C5EA24C93F6000D038CB /* Section.swift */; };
-		0AC7779F24CCE45E00BA2833 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0AC7779E24CCE45E00BA2833 /* SDWebImageSwiftUI */; };
+		0AC7779F24CCE45E00BA2833 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 0AC7779E24CCE45E00BA2833 /* SwiftPackageProductDependency */; };
 		0AC777A124CCE8B200BA2833 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC777A024CCE8B200BA2833 /* BlurView.swift */; };
 		0AC777A324CCFB8700BA2833 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC777A224CCFB8600BA2833 /* Buttons.swift */; };
 		0AD9E93B24CDFAA500149E75 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9E93924CDFAA500149E75 /* loading.json */; };
@@ -49,13 +48,15 @@
 		0AD9E94F24CDFAF500149E75 /* WorkSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9E94524CDFAF500149E75 /* WorkSans-Thin.ttf */; };
 		0AD9E95024CDFAF500149E75 /* WorkSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9E94624CDFAF500149E75 /* WorkSans-Black.ttf */; };
 		0AD9E95124CDFAF500149E75 /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9E94724CDFAF500149E75 /* WorkSans-Bold.ttf */; };
-		0AD9E95424CDFB3300149E75 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0AD9E95324CDFB3300149E75 /* Lottie */; };
+		0AD9E95424CDFB3300149E75 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 0AD9E95324CDFB3300149E75 /* SwiftPackageProductDependency */; };
 		0AD9E95724CDFBB500149E75 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9E95624CDFBB500149E75 /* LottieView.swift */; };
 		0AE3F7D024CA470E00873C0B /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3F7CF24CA470E00873C0B /* UpdateDetail.swift */; };
 		0AE3F7D224CA6FE900873C0B /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE3F7D124CA6FE900873C0B /* UpdateStore.swift */; };
+		B5431D4130B78902F0397376 /* Pods_DesignCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A6F5BE7B2619F43D8D9D2E /* Pods_DesignCode.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0474C93477C3CBFCA3B871DD /* Pods-DesignCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignCode.release.xcconfig"; path = "Target Support Files/Pods-DesignCode/Pods-DesignCode.release.xcconfig"; sourceTree = "<group>"; };
 		0A138D3D24C9477800F9FCD1 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		0A1EEB1E24CE4F8B007BAB31 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		0A2863E224CBB88300FE8ECD /* CourseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
@@ -100,9 +101,8 @@
 		0AD9E95624CDFBB500149E75 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		0AE3F7CF24CA470E00873C0B /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 		0AE3F7D124CA6FE900873C0B /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
-		5871D5981360802FD0D60257 /* Pods-DesignCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignCode.debug.xcconfig"; path = "Target Support Files/Pods-DesignCode/Pods-DesignCode.debug.xcconfig"; sourceTree = "<group>"; };
-		6BC309991EE00D3E022AD197 /* Pods_DesignCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesignCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E40182C27D82680DF7AC7C7C /* Pods-DesignCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignCode.release.xcconfig"; path = "Target Support Files/Pods-DesignCode/Pods-DesignCode.release.xcconfig"; sourceTree = "<group>"; };
+		13A6F5BE7B2619F43D8D9D2E /* Pods_DesignCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesignCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		549CCB63220C4562B251E1D4 /* Pods-DesignCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignCode.debug.xcconfig"; path = "Target Support Files/Pods-DesignCode/Pods-DesignCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,10 +110,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AC7779F24CCE45E00BA2833 /* SDWebImageSwiftUI in Frameworks */,
-				0A2863F024CBDC2900FE8ECD /* Contentful in Frameworks */,
-				0AD9E95424CDFB3300149E75 /* Lottie in Frameworks */,
-				06DDC96405273CAC80A30F79 /* Pods_DesignCode.framework in Frameworks */,
+				0AC7779F24CCE45E00BA2833 /* BuildFile in Frameworks */,
+				0A2863F024CBDC2900FE8ECD /* BuildFile in Frameworks */,
+				0AD9E95424CDFB3300149E75 /* BuildFile in Frameworks */,
+				B5431D4130B78902F0397376 /* Pods_DesignCode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,7 +161,7 @@
 				0ABF804624C7935700CFD7AE /* DesignCode */,
 				0ABF804524C7935700CFD7AE /* Products */,
 				E3F72CF75F447AD6ECDFA0AC /* Pods */,
-				A52AA264B9AE409927606E2B /* Frameworks */,
+				39418726FE81D3054D136C57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -276,10 +276,10 @@
 			path = UIRepresentable;
 			sourceTree = "<group>";
 		};
-		A52AA264B9AE409927606E2B /* Frameworks */ = {
+		39418726FE81D3054D136C57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6BC309991EE00D3E022AD197 /* Pods_DesignCode.framework */,
+				13A6F5BE7B2619F43D8D9D2E /* Pods_DesignCode.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -287,8 +287,8 @@
 		E3F72CF75F447AD6ECDFA0AC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5871D5981360802FD0D60257 /* Pods-DesignCode.debug.xcconfig */,
-				E40182C27D82680DF7AC7C7C /* Pods-DesignCode.release.xcconfig */,
+				549CCB63220C4562B251E1D4 /* Pods-DesignCode.debug.xcconfig */,
+				0474C93477C3CBFCA3B871DD /* Pods-DesignCode.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -300,11 +300,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0ABF805324C7935900CFD7AE /* Build configuration list for PBXNativeTarget "DesignCode" */;
 			buildPhases = (
-				DF687927BB7BDE0FB96DDFDD /* [CP] Check Pods Manifest.lock */,
+				1922ADA16B3AB1AE42B6FD00 /* [CP] Check Pods Manifest.lock */,
 				0ABF804024C7935700CFD7AE /* Sources */,
 				0ABF804124C7935700CFD7AE /* Frameworks */,
 				0ABF804224C7935700CFD7AE /* Resources */,
-				B0A7A0DC0CA98E220A048D5A /* [CP] Embed Pods Frameworks */,
+				2F82D857ECFB6D587CD4243E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -312,9 +312,9 @@
 			);
 			name = DesignCode;
 			packageProductDependencies = (
-				0A2863EF24CBDC2900FE8ECD /* Contentful */,
-				0AC7779E24CCE45E00BA2833 /* SDWebImageSwiftUI */,
-				0AD9E95324CDFB3300149E75 /* Lottie */,
+				0A2863EF24CBDC2900FE8ECD /* SwiftPackageProductDependency */,
+				0AC7779E24CCE45E00BA2833 /* SwiftPackageProductDependency */,
+				0AD9E95324CDFB3300149E75 /* SwiftPackageProductDependency */,
 			);
 			productName = DesignCode;
 			productReference = 0ABF804424C7935700CFD7AE /* DesignCode.app */;
@@ -344,9 +344,9 @@
 			);
 			mainGroup = 0ABF803B24C7935700CFD7AE;
 			packageReferences = (
-				0A2863EE24CBDC2900FE8ECD /* XCRemoteSwiftPackageReference "contentful.swift" */,
-				0AC7779D24CCE45E00BA2833 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-				0AD9E95224CDFB3300149E75 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				0A2863EE24CBDC2900FE8ECD /* RemoteSwiftPackageReference */,
+				0AC7779D24CCE45E00BA2833 /* RemoteSwiftPackageReference */,
+				0AD9E95224CDFB3300149E75 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 0ABF804524C7935700CFD7AE /* Products */;
 			projectDirPath = "";
@@ -383,24 +383,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B0A7A0DC0CA98E220A048D5A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DesignCode/Pods-DesignCode-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DesignCode/Pods-DesignCode-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DesignCode/Pods-DesignCode-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DF687927BB7BDE0FB96DDFDD /* [CP] Check Pods Manifest.lock */ = {
+		1922ADA16B3AB1AE42B6FD00 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -420,6 +403,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F82D857ECFB6D587CD4243E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesignCode/Pods-DesignCode-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesignCode/Pods-DesignCode-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DesignCode/Pods-DesignCode-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -580,7 +580,7 @@
 		};
 		0ABF805424C7935900CFD7AE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5871D5981360802FD0D60257 /* Pods-DesignCode.debug.xcconfig */;
+			baseConfigurationReference = 549CCB63220C4562B251E1D4 /* Pods-DesignCode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -604,7 +604,7 @@
 		};
 		0ABF805524C7935900CFD7AE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E40182C27D82680DF7AC7C7C /* Pods-DesignCode.release.xcconfig */;
+			baseConfigurationReference = 0474C93477C3CBFCA3B871DD /* Pods-DesignCode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -650,7 +650,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0A2863EE24CBDC2900FE8ECD /* XCRemoteSwiftPackageReference "contentful.swift" */ = {
+		0A2863EE24CBDC2900FE8ECD /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/contentful/contentful.swift.git";
 			requirement = {
@@ -658,7 +658,7 @@
 				minimumVersion = 5.1.1;
 			};
 		};
-		0AC7779D24CCE45E00BA2833 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+		0AC7779D24CCE45E00BA2833 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
 			requirement = {
@@ -666,7 +666,7 @@
 				minimumVersion = 1.5.0;
 			};
 		};
-		0AD9E95224CDFB3300149E75 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		0AD9E95224CDFB3300149E75 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -677,19 +677,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0A2863EF24CBDC2900FE8ECD /* Contentful */ = {
+		0A2863EF24CBDC2900FE8ECD /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0A2863EE24CBDC2900FE8ECD /* XCRemoteSwiftPackageReference "contentful.swift" */;
+			package = 0A2863EE24CBDC2900FE8ECD /* RemoteSwiftPackageReference */;
 			productName = Contentful;
 		};
-		0AC7779E24CCE45E00BA2833 /* SDWebImageSwiftUI */ = {
+		0AC7779E24CCE45E00BA2833 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0AC7779D24CCE45E00BA2833 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			package = 0AC7779D24CCE45E00BA2833 /* RemoteSwiftPackageReference */;
 			productName = SDWebImageSwiftUI;
 		};
-		0AD9E95324CDFB3300149E75 /* Lottie */ = {
+		0AD9E95324CDFB3300149E75 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0AD9E95224CDFB3300149E75 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = 0AD9E95224CDFB3300149E75 /* RemoteSwiftPackageReference */;
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */

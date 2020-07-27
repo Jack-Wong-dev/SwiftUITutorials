@@ -14,6 +14,7 @@ struct CourseList: View {
     @State var activeIndex = -1
     @State var activeView = CGSize.zero
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @State var isScrollable = false
     
     var body: some View {
         GeometryReader { bounds in
@@ -40,15 +41,16 @@ struct CourseList: View {
                                     index: index,
                                     activeIndex: $activeIndex,
                                     activeView: $activeView,
-                                    bounds: bounds
+                                    bounds: bounds,
+                                    isScrollable: $isScrollable
                                 )
-                                .offset(y: store.courses[index].show ? -geometry.frame(in: .global).minY : 0)
+                                    .offset(y: store.courses[index].show ? -geometry.frame(in: .global).minY : 0)
                                     .opacity(activeIndex != index && active ? 0 : 1)
                                     .scaleEffect(activeIndex != index && active ? 0.5 : 1)
                                     .offset(x: activeIndex != index && active ? bounds.size.width : 0)
                             }
                             .frame(height: horizontalSizeClass == .regular ? 80 : 280)
-                            .frame(maxWidth: store.courses[index].show ? 712 : getCardWith(bounds: bounds))
+                            .frame(maxWidth: store.courses[index].show ? 712 : getCardWidth(bounds: bounds))
                             .zIndex(store.courses[index].show ? 1 : 0)
                         }
                     }
@@ -57,31 +59,31 @@ struct CourseList: View {
                 }
                 .statusBar(hidden: active ? true : false)
                 .animation(.linear)
+                .disabled(active && !isScrollable ? true : false)
             }
         }
     }
 }
 
-func getCardWith(bounds: GeometryProxy) -> CGFloat {
+func getCardWidth(bounds: GeometryProxy) -> CGFloat {
     if bounds.size.width > 712 {
-        //For iPad when in landscape mode, prevents the card from going fullscreen
         return 712
     }
+    
     return bounds.size.width - 60
 }
 
 func getCardCornerRadius(bounds: GeometryProxy) -> CGFloat {
-    //if the screen is small and doesn't have a notch
     if bounds.size.width < 712 && bounds.safeAreaInsets.top < 44 {
         return 0
     }
+    
     return 30
 }
 
 struct CourseList_Previews: PreviewProvider {
     static var previews: some View {
         CourseList()
-            .previewDevice("iPhone 11 Pro")
     }
 }
 
@@ -93,6 +95,7 @@ struct CourseView: View {
     @Binding var activeIndex: Int
     @Binding var activeView: CGSize
     var bounds: GeometryProxy
+    @Binding var isScrollable: Bool
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -106,10 +109,11 @@ struct CourseView: View {
                 
                 Text("Minimal coding experience required, such as in HTML and CSS. Please note that Xcode 11 and Catalina are essential. Once you get everything installed, it'll get a lot friendlier! I added a bunch of troubleshoots at the end of this page to help you navigate the issues you might encounter.")
             }
+            .animation(nil)
             .padding(30)
             .frame(maxWidth: show ? .infinity : screen.width - 60, maxHeight: show ? .infinity : 280, alignment: .top)
             .offset(y: show ? 460 : 0)
-            .background(Color("background2"))
+            .background(Color("background1"))
             .clipShape(RoundedRectangle(cornerRadius: show ? getCardCornerRadius(bounds: bounds) : 30, style: .continuous))
             .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
             .opacity(show ? 1 : 0)
@@ -137,10 +141,10 @@ struct CourseView: View {
                         .background(Color.black)
                         .clipShape(Circle())
                         .opacity(show ? 1 : 0)
+                        .offset(x: 2, y: -2)
                     }
                 }
                 Spacer()
-//                Image(uiImage: course.image)
                 WebImage(url: course.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -160,13 +164,14 @@ struct CourseView: View {
                     guard value.translation.height < 300 else { return }
                     guard value.translation.height > 0 else { return }
                     
-                    self.activeView = value.translation
+                    activeView = value.translation
                 }
                 .onEnded { value in
                     if activeView.height > 50 {
                         show = false
                         active = false
                         activeIndex = -1
+                        isScrollable = false
                     }
                     activeView = .zero
                 }
@@ -176,18 +181,23 @@ struct CourseView: View {
                 show.toggle()
                 active.toggle()
                 if show {
-                    activeIndex = index
+                    activeIndex = self.index
                 } else {
                     activeIndex = -1
                 }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                    isScrollable = true
+                }
             }
             
-//            if show {
-//                CourseDetail(course: course, show: $show, active: $active, activeIndex: $activeIndex)
-//                    .background(Color.white)
-//                    .animation(nil)
-//            }
-        } //Won't go fullscreen on ipads that are not ipad pro
+            if isScrollable {
+                CourseDetail(course: course, show: $show, active: $active, activeIndex: $activeIndex, isScrollable: $isScrollable, bounds: bounds)
+                    .background(Color("background1"))
+                    .clipShape(RoundedRectangle(cornerRadius: show ? getCardCornerRadius(bounds: bounds) : 30, style: .continuous))
+                    .animation(nil)
+                    .transition(.identity)
+            }
+        }
         .frame(height: show ? bounds.size.height + bounds.safeAreaInsets.top + bounds.safeAreaInsets.bottom : 280)
         .scaleEffect(1 - activeView.height / 1000)
         .rotation3DEffect(Angle(degrees: Double(activeView.height / 10)), axis: (x: 0, y: 10.0, z: 0))
@@ -197,20 +207,22 @@ struct CourseView: View {
             show ?
             DragGesture().onChanged { value in
                 guard value.translation.height < 300 else { return }
-                guard value.translation.height > 0 else { return }
+                guard value.translation.height > 50 else { return }
                 
-                activeView = value.translation
+                self.activeView = value.translation
             }
             .onEnded { value in
                 if activeView.height > 50 {
                     show = false
                     active = false
                     activeIndex = -1
+                    isScrollable = false
                 }
                 activeView = .zero
             }
             : nil
         )
+        .disabled(active && !isScrollable ? true : false)
         .edgesIgnoringSafeArea(.all)
     }
 }

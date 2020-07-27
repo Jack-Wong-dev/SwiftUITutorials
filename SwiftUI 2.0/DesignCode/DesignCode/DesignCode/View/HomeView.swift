@@ -7,31 +7,33 @@
 
 import SwiftUI
 
+
 struct HomeView: View {
     @Binding var showProfile: Bool
-    @Binding var showContent: Bool
     @State var showUpdate = false
+    @Binding var showContent: Bool
     @Binding var viewState: CGSize
-    
     @ObservedObject var store = CourseStore()
     @State var active = false
     @State var activeIndex = -1
     @State var activeView = CGSize.zero
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @State var isScrollable = false
     
     var body: some View {
         GeometryReader { bounds in
             ScrollView {
                 VStack {
-                    HStack {
+                    HStack(spacing: 12) {
                         Text("Watching")
-                            //                    .font(.system(size: 28, weight: .bold))
+                            .font(.system(size: 28, weight: .bold))
                             .modifier(CustomFontModifier(size: 28))
                         
                         Spacer()
                         
                         AvatarView(showProfile: $showProfile)
-                        Button(action: {showUpdate.toggle()}) {
+                        
+                        Button(action: { showUpdate.toggle() }) {
                             Image(systemName: "bell")
                                 //                            .renderingMode(.original)
                                 .foregroundColor(.primary)
@@ -40,7 +42,7 @@ struct HomeView: View {
                                 .background(Color("background3"))
                                 .clipShape(Circle())
                                 .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-                                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10) //Double drop shadows
+                                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
                         }
                         .sheet(isPresented: $showUpdate) {
                             UpdateList()
@@ -60,17 +62,15 @@ struct HomeView: View {
                             }
                     }
                     .blur(radius: active ? 20 : 0)
-
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 20) {
                             ForEach(sectionData) { item in
                                 GeometryReader { geometry in
                                     SectionView(section: item)
-                                        .rotation3DEffect(
-                                            Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -getAngleMultiplier(bounds: bounds)),
-                                            axis: (x: 0.0, y: 10.0, z: 0.0)
-                                        )
+                                        .rotation3DEffect(Angle(degrees:
+                                                                    Double(geometry.frame(in: .global).minX - 30) / -getAngleMultiplier(bounds: bounds)
+                                        ), axis: (x: 0, y: 10, z: 0))
                                 }
                                 .frame(width: 275, height: 275)
                             }
@@ -90,7 +90,7 @@ struct HomeView: View {
                     .offset(y: -60)
                     .blur(radius: active ? 20 : 0)
                     
-                    VStack(spacing: 30.0) {
+                    VStack(spacing: 30) {
                         ForEach(store.courses.indices, id: \.self) { index in
                             GeometryReader { geometry in
                                 CourseView(
@@ -100,7 +100,8 @@ struct HomeView: View {
                                     index: index,
                                     activeIndex: $activeIndex,
                                     activeView: $activeView,
-                                    bounds: bounds
+                                    bounds: bounds,
+                                    isScrollable: $isScrollable
                                 )
                                 .offset(y: store.courses[index].show ? -geometry.frame(in: .global).minY : 0)
                                 .opacity(activeIndex != index && active ? 0 : 1)
@@ -108,12 +109,12 @@ struct HomeView: View {
                                 .offset(x: activeIndex != index && active ? bounds.size.width : 0)
                             }
                             .frame(height: horizontalSizeClass == .regular ? 80 : 280)
-                            .frame(maxWidth: store.courses[index].show ? 712 : getCardWith(bounds: bounds))
+                            .frame(maxWidth: store.courses[index].show ? 712 : getCardWidth(bounds: bounds))
                             .zIndex(store.courses[index].show ? 1 : 0)
                         }
                     }
                     .padding(.bottom, 300)
-                    .offset(y: -60)     //because of the horizontal scroll view was clipping the shadow, we need to push the bottom content
+                    .offset(y: -60)
                     
                     Spacer()
                 }
@@ -123,6 +124,7 @@ struct HomeView: View {
                 .scaleEffect(showProfile ? 0.9 : 1)
                 .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
             }
+            .disabled(active && !isScrollable ? true : false)
         }
     }
 }
@@ -130,20 +132,19 @@ struct HomeView: View {
 func getAngleMultiplier(bounds: GeometryProxy) -> Double {
     if bounds.size.width > 500 {
         return 80
+    } else {
+        return 20
     }
-    return 20
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(showProfile: .constant(false), showContent: .constant(false), viewState: .constant(.zero))
             .environmentObject(UserStore())
-            .previewDevice("iPhone 11 Pro")
     }
 }
 
 struct SectionView: View {
-    
     var section: Section
     var width: CGFloat = 275
     var height: CGFloat = 275
@@ -158,6 +159,7 @@ struct SectionView: View {
                 Spacer()
                 Image(section.logo)
             }
+            
             Text(section.text.uppercased())
                 .frame(maxWidth: .infinity, alignment: .leading)
             
@@ -166,7 +168,8 @@ struct SectionView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 210)
         }
-        .padding([.top, .horizontal], 20)
+        .padding(.top, 20)
+        .padding(.horizontal, 20)
         .frame(width: width, height: height)
         .background(section.color)
         .cornerRadius(30)
@@ -174,22 +177,25 @@ struct SectionView: View {
     }
 }
 
-
 let sectionData = [
-    Section(title: "Prototype Designs in Swift", text: "18 Section", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card4")), color: Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))),
-    Section(title: "Build a SwiftUI App", text: "20 Section", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card2")), color: Color(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1))),
-    Section(title: "SwiftUI Advanced", text: "20 Section", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Background1")), color: Color(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1))),
+    Section(title: "Prototype designs in SwiftUI", text: "18 Sections", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card4")), color: Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))),
+    Section(title: "Build a SwiftUI app", text: "20 Sections", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Background1")), color: Color(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1))),
+    Section(title: "SwiftUI Advanced", text: "20 Sections", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card2")), color: Color(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)))
 ]
+
+
+
 
 struct WatchRingsView: View {
     var body: some View {
-        HStack(spacing: 30.0) {
+        HStack(spacing: 30) {
             HStack(spacing: 12.0) {
-                RingView(color1: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), color2: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), width: 44, height: 44, percent: 68, show: .constant(true))
+                RingView(color1: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), color2: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), width: 44, height: 44, percent: 68, show: .constant(true))
                 VStack(alignment: .leading, spacing: 4.0) {
-                    Text("6 minutes left").font(.subheadline).modifier(FontModifier(style: .subheadline))
-                    Text("Watched 10 minutes today").modifier(FontModifier(style: .caption))
+                    Text("6 minutes left").bold().modifier(FontModifier(style: .subheadline))
+                    Text("Watched 10 mins today").modifier(FontModifier(style: .caption))
                 }
+                .modifier(FontModifier())
             }
             .padding(8)
             .background(Color("background3"))
@@ -197,8 +203,7 @@ struct WatchRingsView: View {
             .modifier(ShadowModifier())
             
             HStack(spacing: 12.0) {
-                RingView(color1: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), color2: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), width: 32, height: 32, percent: 55, show: .constant(true))
-                
+                RingView(color1: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), color2: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), width: 32, height: 32, percent: 54, show: .constant(true))
             }
             .padding(8)
             .background(Color("background3"))
@@ -207,7 +212,6 @@ struct WatchRingsView: View {
             
             HStack(spacing: 12.0) {
                 RingView(color1: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), color2: #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1), width: 32, height: 32, percent: 32, show: .constant(true))
-                
             }
             .padding(8)
             .background(Color("background3"))

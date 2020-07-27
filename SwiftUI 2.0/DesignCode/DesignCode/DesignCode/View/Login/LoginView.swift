@@ -30,15 +30,14 @@ struct LoginView: View {
                 self.showAlert = true
             } else {
                 self.isSuccessful = true
-                user.isLogged = true
+                self.user.isLogged = true
+                UserDefaults.standard.set(true, forKey: "isLogged")
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     self.email = ""
                     self.password = ""
                     self.isSuccessful = false
-                    user.showLogin = false
-                    
-                    UserDefaults.standard.setValue(true, forKeyPath: "isLogged")
+                    self.user.showLogin = false
                 }
             }
         }
@@ -65,7 +64,7 @@ struct LoginView: View {
                         Image(systemName: "person.crop.circle.fill")
                             .foregroundColor(Color(#colorLiteral(red: 0.6549019608, green: 0.7137254902, blue: 0.862745098, alpha: 1)))
                             .frame(width: 44, height: 44)
-                            .background(Color.white)
+                            .background(Color("background1"))
                             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                             .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5)
                             .padding(.leading)
@@ -87,7 +86,7 @@ struct LoginView: View {
                         Image(systemName: "lock.fill")
                             .foregroundColor(Color(#colorLiteral(red: 0.6549019608, green: 0.7137254902, blue: 0.862745098, alpha: 1)))
                             .frame(width: 44, height: 44)
-                            .background(Color.white)
+                            .background(Color("background1"))
                             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                             .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5)
                             .padding(.leading)
@@ -156,7 +155,6 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
-            .previewDevice("iPhone 11 Pro")
     }
 }
 
