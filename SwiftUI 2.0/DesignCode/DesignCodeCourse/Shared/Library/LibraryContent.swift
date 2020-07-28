@@ -17,7 +17,7 @@ struct LibraryContent: LibraryContentProvider {
         )
     }
     
-    @LibraryContentBuilder
+    @LibraryContentBuilder    // Base:Any or Base:View isn't working, Image does however
     func modifiers(base: Image) -> [LibraryItem] {
         LibraryItem(
             base.cardStyle(color: Color.blue, cornerRadius: 22),
