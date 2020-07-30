@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,12 @@
 		0ACB325324D2A3DA002B181C /* FolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB325224D2A3DA002B181C /* FolderView.swift */; };
 		0ACB325524D2A3EF002B181C /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB325424D2A3EF002B181C /* MailView.swift */; };
 		0ACB325724D328AB002B181C /* ThreeColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB325624D328AB002B181C /* ThreeColumnView.swift */; };
+		0ACB325924D32F6A002B181C /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB325824D32F6A002B181C /* Secrets.swift */; };
+		0ACB325C24D32FDB002B181C /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB325B24D32FDB002B181C /* Photo.swift */; };
+		0ACB325D24D32FDB002B181C /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB325B24D32FDB002B181C /* Photo.swift */; };
+		0ACB325F24D332DF002B181C /* UnsplashedPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB325E24D332DF002B181C /* UnsplashedPhotoView.swift */; };
+		0ACB326024D332DF002B181C /* UnsplashedPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB325E24D332DF002B181C /* UnsplashedPhotoView.swift */; };
+		0ACB326324D3338F002B181C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0ACB326224D3338F002B181C /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,9 @@
 		0ACB325224D2A3DA002B181C /* FolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderView.swift; sourceTree = "<group>"; };
 		0ACB325424D2A3EF002B181C /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		0ACB325624D328AB002B181C /* ThreeColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeColumnView.swift; sourceTree = "<group>"; };
+		0ACB325824D32F6A002B181C /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		0ACB325B24D32FDB002B181C /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		0ACB325E24D332DF002B181C /* UnsplashedPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashedPhotoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ACB326324D3338F002B181C /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,11 +118,12 @@
 		0ACB320E24D2A344002B181C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				0ACB324D24D2A373002B181C /* Model */,
+				0ACB325A24D32F90002B181C /* UnsplashPhotoViewer */,
 				0ACB324C24D2A367002B181C /* ThreeColumnNav */,
 				0ACB320F24D2A344002B181C /* iOS14PracticeApp.swift */,
 				0ACB321024D2A344002B181C /* ContentView.swift */,
 				0ACB321124D2A34C002B181C /* Assets.xcassets */,
+				0ACB325824D32F6A002B181C /* Secrets.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -166,6 +177,7 @@
 		0ACB324C24D2A367002B181C /* ThreeColumnNav */ = {
 			isa = PBXGroup;
 			children = (
+				0ACB324E24D2A380002B181C /* Mail.swift */,
 				0ACB325024D2A3A5002B181C /* SideBar.swift */,
 				0ACB325224D2A3DA002B181C /* FolderView.swift */,
 				0ACB325424D2A3EF002B181C /* MailView.swift */,
@@ -174,12 +186,13 @@
 			path = ThreeColumnNav;
 			sourceTree = "<group>";
 		};
-		0ACB324D24D2A373002B181C /* Model */ = {
+		0ACB325A24D32F90002B181C /* UnsplashPhotoViewer */ = {
 			isa = PBXGroup;
 			children = (
-				0ACB324E24D2A380002B181C /* Mail.swift */,
+				0ACB325B24D32FDB002B181C /* Photo.swift */,
+				0ACB325E24D332DF002B181C /* UnsplashedPhotoView.swift */,
 			);
-			path = Model;
+			path = UnsplashPhotoViewer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +211,9 @@
 			dependencies = (
 			);
 			name = "iOS14Practice (iOS)";
+			packageProductDependencies = (
+				0ACB326224D3338F002B181C /* SDWebImageSwiftUI */,
+			);
 			productName = "iOS14Practice (iOS)";
 			productReference = 0ACB321624D2A34C002B181C /* iOS14Practice.app */;
 			productType = "com.apple.product-type.application";
@@ -289,6 +305,9 @@
 				Base,
 			);
 			mainGroup = 0ACB320924D2A344002B181C;
+			packageReferences = (
+				0ACB326124D3338F002B181C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 0ACB321724D2A34C002B181C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -340,7 +359,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ACB325324D2A3DA002B181C /* FolderView.swift in Sources */,
+				0ACB325924D32F6A002B181C /* Secrets.swift in Sources */,
+				0ACB325F24D332DF002B181C /* UnsplashedPhotoView.swift in Sources */,
 				0ACB325524D2A3EF002B181C /* MailView.swift in Sources */,
+				0ACB325C24D32FDB002B181C /* Photo.swift in Sources */,
 				0ACB324F24D2A380002B181C /* Mail.swift in Sources */,
 				0ACB325724D328AB002B181C /* ThreeColumnView.swift in Sources */,
 				0ACB323A24D2A34D002B181C /* ContentView.swift in Sources */,
@@ -353,6 +375,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ACB326024D332DF002B181C /* UnsplashedPhotoView.swift in Sources */,
+				0ACB325D24D32FDB002B181C /* Photo.swift in Sources */,
 				0ACB323B24D2A34D002B181C /* ContentView.swift in Sources */,
 				0ACB323924D2A34D002B181C /* iOS14PracticeApp.swift in Sources */,
 			);
@@ -732,6 +756,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0ACB326124D3338F002B181C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0ACB326224D3338F002B181C /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ACB326124D3338F002B181C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0ACB320A24D2A344002B181C /* Project object */;
 }
