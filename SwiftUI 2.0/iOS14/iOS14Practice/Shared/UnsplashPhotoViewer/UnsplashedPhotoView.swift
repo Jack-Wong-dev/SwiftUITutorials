@@ -14,16 +14,20 @@ struct UnsplashedPhotoView: View {
         ScrollView {
             LazyVStack(alignment: .leading) {
                 ForEach(randomImages.photos) { photo in
-                    VStack {
+                    HStack {
                         WebImage(url: URL(string: photo.urls["thumb"]!))
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(height: 200, alignment: .center)
-                            .cornerRadius(15)
-                        Text(photo.alt_description).font(.footnote)
-                            .multilineTextAlignment(.center)
-                            .frame(maxWidth: 200, alignment: .center)
+
+                        Spacer()
+                        
+                        if let description = photo.alt_description {
+                            Text(description).font(.footnote)
+                                .multilineTextAlignment(.center)
+                        }
                     }
+                    .frame(maxWidth: 200, alignment: .center)
                     .padding()
                 }
             }

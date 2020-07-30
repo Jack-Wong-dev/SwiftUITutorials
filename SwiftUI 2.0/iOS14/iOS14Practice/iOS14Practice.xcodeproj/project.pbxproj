@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1751A124D354EE00231730 /* AppTabNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1751A024D354EE00231730 /* AppTabNavigation.swift */; };
+		0A1751A324D355F100231730 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1751A224D355F100231730 /* Navigation.swift */; };
+		0A1751A424D355F100231730 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1751A224D355F100231730 /* Navigation.swift */; };
+		0AB0EC7724D357F0008A2721 /* AppSideBarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0EC7624D357F0008A2721 /* AppSideBarNavigation.swift */; };
+		0AB0EC7824D357F0008A2721 /* AppSideBarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0EC7624D357F0008A2721 /* AppSideBarNavigation.swift */; };
 		0ACB322B24D2A34D002B181C /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB322A24D2A34D002B181C /* Tests_iOS.swift */; };
 		0ACB323624D2A34D002B181C /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB323524D2A34D002B181C /* Tests_macOS.swift */; };
 		0ACB323824D2A34D002B181C /* iOS14PracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB320F24D2A344002B181C /* iOS14PracticeApp.swift */; };
@@ -28,6 +33,8 @@
 		0ACB326324D3338F002B181C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0ACB326224D3338F002B181C /* SDWebImageSwiftUI */; };
 		0ACB326524D33A39002B181C /* Unsplash.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB326424D33A39002B181C /* Unsplash.json */; };
 		0ACB326624D33A39002B181C /* Unsplash.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB326424D33A39002B181C /* Unsplash.json */; };
+		0ACB326824D33D95002B181C /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB326724D33D95002B181C /* ImageGridView.swift */; };
+		0ACB326924D33D95002B181C /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB326724D33D95002B181C /* ImageGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A1751A024D354EE00231730 /* AppTabNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabNavigation.swift; sourceTree = "<group>"; };
+		0A1751A224D355F100231730 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		0AB0EC7624D357F0008A2721 /* AppSideBarNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSideBarNavigation.swift; sourceTree = "<group>"; };
 		0ACB320F24D2A344002B181C /* iOS14PracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS14PracticeApp.swift; sourceTree = "<group>"; };
 		0ACB321024D2A344002B181C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0ACB321124D2A34C002B181C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +81,7 @@
 		0ACB325B24D32FDB002B181C /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		0ACB325E24D332DF002B181C /* UnsplashedPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashedPhotoView.swift; sourceTree = "<group>"; };
 		0ACB326424D33A39002B181C /* Unsplash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Unsplash.json; sourceTree = "<group>"; };
+		0ACB326724D33D95002B181C /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +117,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A17519F24D354D600231730 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0A1751A024D354EE00231730 /* AppTabNavigation.swift */,
+				0A1751A224D355F100231730 /* Navigation.swift */,
+				0AB0EC7624D357F0008A2721 /* AppSideBarNavigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		0ACB320924D2A344002B181C = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +145,7 @@
 				0ACB326424D33A39002B181C /* Unsplash.json */,
 				0ACB325A24D32F90002B181C /* UnsplashPhotoViewer */,
 				0ACB324C24D2A367002B181C /* ThreeColumnNav */,
+				0A17519F24D354D600231730 /* Navigation */,
 				0ACB320F24D2A344002B181C /* iOS14PracticeApp.swift */,
 				0ACB321024D2A344002B181C /* ContentView.swift */,
 				0ACB321124D2A34C002B181C /* Assets.xcassets */,
@@ -195,6 +217,7 @@
 			children = (
 				0ACB325B24D32FDB002B181C /* Photo.swift */,
 				0ACB325E24D332DF002B181C /* UnsplashedPhotoView.swift */,
+				0ACB326724D33D95002B181C /* ImageGridView.swift */,
 			);
 			path = UnsplashPhotoViewer;
 			sourceTree = "<group>";
@@ -369,8 +392,12 @@
 				0ACB325F24D332DF002B181C /* UnsplashedPhotoView.swift in Sources */,
 				0ACB325524D2A3EF002B181C /* MailView.swift in Sources */,
 				0ACB325C24D32FDB002B181C /* Photo.swift in Sources */,
+				0A1751A124D354EE00231730 /* AppTabNavigation.swift in Sources */,
 				0ACB324F24D2A380002B181C /* Mail.swift in Sources */,
 				0ACB325724D328AB002B181C /* ThreeColumnView.swift in Sources */,
+				0AB0EC7724D357F0008A2721 /* AppSideBarNavigation.swift in Sources */,
+				0ACB326824D33D95002B181C /* ImageGridView.swift in Sources */,
+				0A1751A324D355F100231730 /* Navigation.swift in Sources */,
 				0ACB323A24D2A34D002B181C /* ContentView.swift in Sources */,
 				0ACB325124D2A3A5002B181C /* SideBar.swift in Sources */,
 				0ACB323824D2A34D002B181C /* iOS14PracticeApp.swift in Sources */,
@@ -381,8 +408,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ACB326924D33D95002B181C /* ImageGridView.swift in Sources */,
+				0AB0EC7824D357F0008A2721 /* AppSideBarNavigation.swift in Sources */,
 				0ACB326024D332DF002B181C /* UnsplashedPhotoView.swift in Sources */,
 				0ACB325D24D32FDB002B181C /* Photo.swift in Sources */,
+				0A1751A424D355F100231730 /* Navigation.swift in Sources */,
 				0ACB323B24D2A34D002B181C /* ContentView.swift in Sources */,
 				0ACB323924D2A34D002B181C /* iOS14PracticeApp.swift in Sources */,
 			);

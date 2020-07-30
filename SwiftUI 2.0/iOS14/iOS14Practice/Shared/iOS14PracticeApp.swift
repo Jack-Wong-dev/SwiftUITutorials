@@ -13,7 +13,9 @@ struct iOS14Practice: App {
     var body: some Scene {
         WindowGroup {
 //            ThreeColumnView()
-            UnsplashedPhotoView()
+//            UnsplashedPhotoView()
+//            ImageGridView()
+            Navigation()
         }
     }
 }

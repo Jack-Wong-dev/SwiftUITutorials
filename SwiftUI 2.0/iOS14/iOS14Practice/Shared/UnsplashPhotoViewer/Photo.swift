@@ -9,7 +9,7 @@ import Foundation
 
 struct Photo: Identifiable, Decodable {
     var id: String
-    var alt_description: String
+    var alt_description: String?
     var urls: [String:String]
 }
 
@@ -21,7 +21,7 @@ class UnsplashData: ObservableObject {
     }
     
     func loadData() {
-        guard let url = URL(string: "https://api.unsplash.com/photos/random/?count=30&client_id=\(unsplashAPIkey)") else {return}
+        guard let url = URL(string: "https://api.unsplash.com/photos/random/?count=90&client_id=\(unsplashAPIkey)") else {return}
         
         let session = URLSession(configuration: .default)
         
