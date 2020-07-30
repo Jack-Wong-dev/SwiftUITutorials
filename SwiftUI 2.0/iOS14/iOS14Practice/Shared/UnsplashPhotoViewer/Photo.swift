@@ -32,13 +32,14 @@ class UnsplashData: ObservableObject {
             }
             do {
                 let json = try JSONDecoder().decode([Photo].self, from: data)
+                print(json)
                 DispatchQueue.main.async {
                     for photo in json {
                         self.photos.append(photo)
                     }
                 }
             } catch {
-                print(error.localizedDescription)
+                print("DEBUG Catch \(error.localizedDescription)")
             }
         }.resume()
     }

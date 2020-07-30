@@ -26,6 +26,8 @@
 		0ACB325F24D332DF002B181C /* UnsplashedPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB325E24D332DF002B181C /* UnsplashedPhotoView.swift */; };
 		0ACB326024D332DF002B181C /* UnsplashedPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB325E24D332DF002B181C /* UnsplashedPhotoView.swift */; };
 		0ACB326324D3338F002B181C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0ACB326224D3338F002B181C /* SDWebImageSwiftUI */; };
+		0ACB326524D33A39002B181C /* Unsplash.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB326424D33A39002B181C /* Unsplash.json */; };
+		0ACB326624D33A39002B181C /* Unsplash.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB326424D33A39002B181C /* Unsplash.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,7 @@
 		0ACB325824D32F6A002B181C /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		0ACB325B24D32FDB002B181C /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		0ACB325E24D332DF002B181C /* UnsplashedPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashedPhotoView.swift; sourceTree = "<group>"; };
+		0ACB326424D33A39002B181C /* Unsplash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Unsplash.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,7 @@
 		0ACB320E24D2A344002B181C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0ACB326424D33A39002B181C /* Unsplash.json */,
 				0ACB325A24D32F90002B181C /* UnsplashPhotoViewer */,
 				0ACB324C24D2A367002B181C /* ThreeColumnNav */,
 				0ACB320F24D2A344002B181C /* iOS14PracticeApp.swift */,
@@ -326,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ACB323C24D2A34D002B181C /* Assets.xcassets in Resources */,
+				0ACB326524D33A39002B181C /* Unsplash.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ACB323D24D2A34D002B181C /* Assets.xcassets in Resources */,
+				0ACB326624D33A39002B181C /* Unsplash.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
