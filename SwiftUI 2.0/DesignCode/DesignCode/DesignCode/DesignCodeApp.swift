@@ -13,8 +13,9 @@ struct DesignCodeApp: App {
     var body: some Scene {
         FirebaseApp.configure()
         return WindowGroup {
-            Home().environmentObject(UserStore())
+//            Home().environmentObject(UserStore())
 //            CourseList()
+            PostList()
         }
     }
 }

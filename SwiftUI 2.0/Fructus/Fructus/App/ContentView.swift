@@ -1,15 +1,16 @@
 //
 //  ContentView.swift
-//  Shared
+//  Fructus
 //
-//  Created by Jack Wong on 7/30/20.
+//  Created by Jack Wong on 8/24/20.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!").padding()
+        Text("Hello, world!")
+            .padding()
     }
 }
 

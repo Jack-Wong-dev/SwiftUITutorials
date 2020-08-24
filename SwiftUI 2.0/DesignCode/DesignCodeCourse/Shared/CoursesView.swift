@@ -172,10 +172,12 @@ struct CoursesView: View {
         #if os(iOS)
         NavigationView {
             List {
-                NavigationLink(destination: CoursesView()) {
+                NavigationLink(destination: content) {
                     Label("Courses", systemImage: "book.closed")
                 }
-                Label("Tutorials", systemImage: "list.bullet.rectangle")
+                NavigationLink(destination: CourseList()) {
+                    Label("Tutorials", systemImage: "list.bullet.rectangle")
+                }
                 Label("Livestreams", systemImage: "tv")
                 Label("Certificates", systemImage: "mail.stack")
                 Label("Search", systemImage: "magnifyingglass")
@@ -196,7 +198,13 @@ struct CoursesView: View {
 
 struct CoursesView_Previews: PreviewProvider {
     static var previews: some View {
-        CoursesView()
+        
+        Group {
+            CoursesView()
+                .previewDevice("iPhone 11 Pro")
+            CoursesView()
+                .previewDevice("iPad Pro (11-inch) (2nd generation)")
+        }
     }
 }
 

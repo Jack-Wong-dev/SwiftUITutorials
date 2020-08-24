@@ -12,12 +12,12 @@
 		0A1751A424D355F100231730 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1751A224D355F100231730 /* Navigation.swift */; };
 		0AB0EC7724D357F0008A2721 /* AppSideBarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0EC7624D357F0008A2721 /* AppSideBarNavigation.swift */; };
 		0AB0EC7824D357F0008A2721 /* AppSideBarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0EC7624D357F0008A2721 /* AppSideBarNavigation.swift */; };
+		0AB3F23C24D4C996001F8C04 /* CalculatePrimeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB3F23B24D4C996001F8C04 /* CalculatePrimeOperation.swift */; };
 		0ACB322B24D2A34D002B181C /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB322A24D2A34D002B181C /* Tests_iOS.swift */; };
 		0ACB323624D2A34D002B181C /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB323524D2A34D002B181C /* Tests_macOS.swift */; };
 		0ACB323824D2A34D002B181C /* iOS14PracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB320F24D2A344002B181C /* iOS14PracticeApp.swift */; };
 		0ACB323924D2A34D002B181C /* iOS14PracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB320F24D2A344002B181C /* iOS14PracticeApp.swift */; };
 		0ACB323A24D2A34D002B181C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB321024D2A344002B181C /* ContentView.swift */; };
-		0ACB323B24D2A34D002B181C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB321024D2A344002B181C /* ContentView.swift */; };
 		0ACB323C24D2A34D002B181C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB321124D2A34C002B181C /* Assets.xcassets */; };
 		0ACB323D24D2A34D002B181C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB321124D2A34C002B181C /* Assets.xcassets */; };
 		0ACB324F24D2A380002B181C /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB324E24D2A380002B181C /* Mail.swift */; };
@@ -58,6 +58,7 @@
 		0A1751A024D354EE00231730 /* AppTabNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabNavigation.swift; sourceTree = "<group>"; };
 		0A1751A224D355F100231730 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		0AB0EC7624D357F0008A2721 /* AppSideBarNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSideBarNavigation.swift; sourceTree = "<group>"; };
+		0AB3F23B24D4C996001F8C04 /* CalculatePrimeOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePrimeOperation.swift; sourceTree = "<group>"; };
 		0ACB320F24D2A344002B181C /* iOS14PracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS14PracticeApp.swift; sourceTree = "<group>"; };
 		0ACB321024D2A344002B181C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0ACB321124D2A34C002B181C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +128,15 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		0AB3F23D24D4C99C001F8C04 /* Concurrency */ = {
+			isa = PBXGroup;
+			children = (
+				0AB3F23B24D4C996001F8C04 /* CalculatePrimeOperation.swift */,
+				0ACB321024D2A344002B181C /* ContentView.swift */,
+			);
+			path = Concurrency;
+			sourceTree = "<group>";
+		};
 		0ACB320924D2A344002B181C = {
 			isa = PBXGroup;
 			children = (
@@ -143,11 +153,11 @@
 			isa = PBXGroup;
 			children = (
 				0ACB326424D33A39002B181C /* Unsplash.json */,
+				0AB3F23D24D4C99C001F8C04 /* Concurrency */,
 				0ACB325A24D32F90002B181C /* UnsplashPhotoViewer */,
 				0ACB324C24D2A367002B181C /* ThreeColumnNav */,
 				0A17519F24D354D600231730 /* Navigation */,
 				0ACB320F24D2A344002B181C /* iOS14PracticeApp.swift */,
-				0ACB321024D2A344002B181C /* ContentView.swift */,
 				0ACB321124D2A34C002B181C /* Assets.xcassets */,
 				0ACB325824D32F6A002B181C /* Secrets.swift */,
 			);
@@ -397,6 +407,7 @@
 				0ACB325724D328AB002B181C /* ThreeColumnView.swift in Sources */,
 				0AB0EC7724D357F0008A2721 /* AppSideBarNavigation.swift in Sources */,
 				0ACB326824D33D95002B181C /* ImageGridView.swift in Sources */,
+				0AB3F23C24D4C996001F8C04 /* CalculatePrimeOperation.swift in Sources */,
 				0A1751A324D355F100231730 /* Navigation.swift in Sources */,
 				0ACB323A24D2A34D002B181C /* ContentView.swift in Sources */,
 				0ACB325124D2A3A5002B181C /* SideBar.swift in Sources */,
@@ -413,7 +424,6 @@
 				0ACB326024D332DF002B181C /* UnsplashedPhotoView.swift in Sources */,
 				0ACB325D24D32FDB002B181C /* Photo.swift in Sources */,
 				0A1751A424D355F100231730 /* Navigation.swift in Sources */,
-				0ACB323B24D2A34D002B181C /* ContentView.swift in Sources */,
 				0ACB323924D2A34D002B181C /* iOS14PracticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
