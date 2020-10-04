@@ -38,6 +38,7 @@ struct ContentView : View {
     var body: some View {
         ZStack (alignment: .bottom){
             ARViewContainer(modelConfirmedForPlacement: $modelConfirmedForPlacement)
+                .ignoresSafeArea()
             
             if isPlacementEnabled {
                 PlacementButtonsView(isPlacementEnabled: $isPlacementEnabled, selectedModel: $selectedModel, modelConfirmedForPlacement: $modelConfirmedForPlacement)
@@ -48,7 +49,9 @@ struct ContentView : View {
                     ModelPickerView(isPlacementEnabled: $isPlacementEnabled, selectedModel: $selectedModel, models: models).transition(.move(edge: .bottom))
                 }
             }
-        }.onTapGesture {
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .onTapGesture {
             if !isPlacementEnabled {
                 withAnimation {
                     showScrollView.toggle()
@@ -56,6 +59,7 @@ struct ContentView : View {
                 print("DEBUG: Scroll view is now \(showScrollView ? "visible" : "hidden")")
             }
         }
+        .animation(.interactiveSpring())
     }
 }
 
@@ -159,12 +163,23 @@ struct ModelPickerView: View {
                         selectedModel = models[index]
                         isPlacementEnabled = true
                     }){
-                        Image(uiImage: models[index].image)
-                            .resizable()
-                            .frame(height:80)
-                            .aspectRatio(1/1, contentMode: .fit)
-                            .background(Color.white)
-                            .cornerRadius(12)
+                        let model = models[index]
+                        
+                        if let avatar = model.image{
+                            Image(uiImage: avatar)
+                                .resizable()
+                                .frame(height:80)
+                                .aspectRatio(1/1, contentMode: .fit)
+                                .background(Color.white)
+                                .cornerRadius(12)
+                        } else {
+                            
+                            Text(model.modelName)
+                                .frame(width: 88, height: 88, alignment: .center)
+                                .foregroundColor(.blue)
+                                .background(Color.white.cornerRadius(12))
+                        }
+                       
                     }
                     .buttonStyle(PlainButtonStyle())
                 }

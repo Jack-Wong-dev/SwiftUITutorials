@@ -11,7 +11,6 @@ struct FruitDetailView: View {
     //MARK: - Properties
     var fruit: Fruit
     
-    
     //MARK: - Body
     var body: some View {
         NavigationView {
@@ -58,6 +57,7 @@ struct FruitDetailView: View {
             .navigationBarHidden(true)
             .edgesIgnoringSafeArea(.top)
         } //: Navigation
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

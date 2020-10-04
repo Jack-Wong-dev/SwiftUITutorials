@@ -11,14 +11,14 @@ import Combine
 
 class Model {
     var modelName: String
-    var image: UIImage
+    var image: UIImage?
     var modelEntity: ModelEntity?
     
     private var cancalleable: AnyCancellable? = nil
     
     init(modelName: String) {
         self.modelName = modelName
-        self.image = UIImage(named: modelName)!
+        self.image = UIImage(named: modelName)
         
         let filename = modelName + ".usdz"
         self.cancalleable = ModelEntity.loadModelAsync(named: filename)

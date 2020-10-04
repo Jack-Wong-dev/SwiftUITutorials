@@ -8,12 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A038BC224AC3B5000E31CEE /* pickle_rick.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BB924AC3B4F00E31CEE /* pickle_rick.usdz */; };
-		0A038BC324AC3B5000E31CEE /* fender_stratocaster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BBA24AC3B4F00E31CEE /* fender_stratocaster.usdz */; };
 		0A038BC424AC3B5000E31CEE /* gundam.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BBB24AC3B4F00E31CEE /* gundam.usdz */; };
-		0A038BC524AC3B5000E31CEE /* teapot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BBC24AC3B5000E31CEE /* teapot.usdz */; };
-		0A038BC624AC3B5000E31CEE /* toy_biplane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BBD24AC3B5000E31CEE /* toy_biplane.usdz */; };
 		0A038BC724AC3B5000E31CEE /* lambo.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BBE24AC3B5000E31CEE /* lambo.usdz */; };
-		0A038BC824AC3B5000E31CEE /* toy_robot_vintage.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BBF24AC3B5000E31CEE /* toy_robot_vintage.usdz */; };
 		0A038BC924AC3B5000E31CEE /* udon_meal5.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BC024AC3B5000E31CEE /* udon_meal5.usdz */; };
 		0A038BCA24AC3B5000E31CEE /* cartoon.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BC124AC3B5000E31CEE /* cartoon.usdz */; };
 		0A038BCC24AC3FC200E31CEE /* Medieval_Fantasy_Tavern.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0A038BCB24AC3FC200E31CEE /* Medieval_Fantasy_Tavern.usdz */; };
@@ -24,16 +20,18 @@
 		0A41E6FF24ABCDAE0041F2D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E6FE24ABCDAE0041F2D2 /* Assets.xcassets */; };
 		0A41E70224ABCDAE0041F2D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A41E70124ABCDAE0041F2D2 /* Preview Assets.xcassets */; };
 		0A41E71324ABE1580041F2D2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A41E71224ABE1580041F2D2 /* Model.swift */; };
+		0AA8FB102527C6DC0024C836 /* teapot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8FB0F2527C6DC0024C836 /* teapot.usdz */; };
+		0AA8FB142527C6F10024C836 /* toy_biplane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8FB132527C6F10024C836 /* toy_biplane.usdz */; };
+		0AA8FB1C2527C7150024C836 /* fender_stratocaster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8FB1B2527C7150024C836 /* fender_stratocaster.usdz */; };
+		0AA8FB3E2527CF8A0024C836 /* isabelle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8FB3D2527CF8A0024C836 /* isabelle.usdz */; };
+		0AA8FB412527D00C0024C836 /* robot3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8FB402527D00C0024C836 /* robot3.usdz */; };
+		0AA8FB442527D19D0024C836 /* scorbunny.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0AA8FB432527D19D0024C836 /* scorbunny.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A038BB924AC3B4F00E31CEE /* pickle_rick.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = pickle_rick.usdz; sourceTree = "<group>"; };
-		0A038BBA24AC3B4F00E31CEE /* fender_stratocaster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = fender_stratocaster.usdz; path = ../../../../../../../Downloads/fender_stratocaster.usdz; sourceTree = "<group>"; };
 		0A038BBB24AC3B4F00E31CEE /* gundam.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gundam.usdz; sourceTree = "<group>"; };
-		0A038BBC24AC3B5000E31CEE /* teapot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = teapot.usdz; path = ../../../../../../../Downloads/teapot.usdz; sourceTree = "<group>"; };
-		0A038BBD24AC3B5000E31CEE /* toy_biplane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = toy_biplane.usdz; path = ../../../../../../../Downloads/toy_biplane.usdz; sourceTree = "<group>"; };
 		0A038BBE24AC3B5000E31CEE /* lambo.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = lambo.usdz; sourceTree = "<group>"; };
-		0A038BBF24AC3B5000E31CEE /* toy_robot_vintage.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = toy_robot_vintage.usdz; path = ../../../../../../../Downloads/toy_robot_vintage.usdz; sourceTree = "<group>"; };
 		0A038BC024AC3B5000E31CEE /* udon_meal5.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = udon_meal5.usdz; sourceTree = "<group>"; };
 		0A038BC124AC3B5000E31CEE /* cartoon.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = cartoon.usdz; sourceTree = "<group>"; };
 		0A038BCB24AC3FC200E31CEE /* Medieval_Fantasy_Tavern.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Medieval_Fantasy_Tavern.usdz; sourceTree = "<group>"; };
@@ -45,6 +43,12 @@
 		0A41E70124ABCDAE0041F2D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0A41E70324ABCDAE0041F2D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A41E71224ABE1580041F2D2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		0AA8FB0F2527C6DC0024C836 /* teapot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = teapot.usdz; sourceTree = "<group>"; };
+		0AA8FB132527C6F10024C836 /* toy_biplane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane.usdz; sourceTree = "<group>"; };
+		0AA8FB1B2527C7150024C836 /* fender_stratocaster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = fender_stratocaster.usdz; sourceTree = "<group>"; };
+		0AA8FB3D2527CF8A0024C836 /* isabelle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = isabelle.usdz; sourceTree = "<group>"; };
+		0AA8FB402527D00C0024C836 /* robot3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot3.usdz; sourceTree = "<group>"; };
+		0AA8FB432527D19D0024C836 /* scorbunny.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = scorbunny.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,14 +113,16 @@
 			isa = PBXGroup;
 			children = (
 				0A038BC124AC3B5000E31CEE /* cartoon.usdz */,
-				0A038BBA24AC3B4F00E31CEE /* fender_stratocaster.usdz */,
 				0A038BBE24AC3B5000E31CEE /* lambo.usdz */,
+				0AA8FB132527C6F10024C836 /* toy_biplane.usdz */,
+				0AA8FB1B2527C7150024C836 /* fender_stratocaster.usdz */,
 				0A038BB924AC3B4F00E31CEE /* pickle_rick.usdz */,
 				0A038BBB24AC3B4F00E31CEE /* gundam.usdz */,
-				0A038BBC24AC3B5000E31CEE /* teapot.usdz */,
-				0A038BBD24AC3B5000E31CEE /* toy_biplane.usdz */,
-				0A038BBF24AC3B5000E31CEE /* toy_robot_vintage.usdz */,
+				0AA8FB0F2527C6DC0024C836 /* teapot.usdz */,
 				0A038BC024AC3B5000E31CEE /* udon_meal5.usdz */,
+				0AA8FB432527D19D0024C836 /* scorbunny.usdz */,
+				0AA8FB402527D00C0024C836 /* robot3.usdz */,
+				0AA8FB3D2527CF8A0024C836 /* isabelle.usdz */,
 				0A038BCD24AC428100E31CEE /* Mr_Meeseks.usdz */,
 				0A038BCB24AC3FC200E31CEE /* Medieval_Fantasy_Tavern.usdz */,
 			);
@@ -186,17 +192,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A038BC624AC3B5000E31CEE /* toy_biplane.usdz in Resources */,
+				0AA8FB412527D00C0024C836 /* robot3.usdz in Resources */,
 				0A41E70224ABCDAE0041F2D2 /* Preview Assets.xcassets in Resources */,
-				0A038BC524AC3B5000E31CEE /* teapot.usdz in Resources */,
+				0AA8FB1C2527C7150024C836 /* fender_stratocaster.usdz in Resources */,
 				0A038BCE24AC428100E31CEE /* Mr_Meeseks.usdz in Resources */,
 				0A038BCC24AC3FC200E31CEE /* Medieval_Fantasy_Tavern.usdz in Resources */,
 				0A038BC924AC3B5000E31CEE /* udon_meal5.usdz in Resources */,
-				0A038BC824AC3B5000E31CEE /* toy_robot_vintage.usdz in Resources */,
+				0AA8FB142527C6F10024C836 /* toy_biplane.usdz in Resources */,
+				0AA8FB3E2527CF8A0024C836 /* isabelle.usdz in Resources */,
 				0A038BC724AC3B5000E31CEE /* lambo.usdz in Resources */,
+				0AA8FB442527D19D0024C836 /* scorbunny.usdz in Resources */,
 				0A038BCA24AC3B5000E31CEE /* cartoon.usdz in Resources */,
 				0A038BC224AC3B5000E31CEE /* pickle_rick.usdz in Resources */,
-				0A038BC324AC3B5000E31CEE /* fender_stratocaster.usdz in Resources */,
+				0AA8FB102527C6DC0024C836 /* teapot.usdz in Resources */,
 				0A038BC424AC3B5000E31CEE /* gundam.usdz in Resources */,
 				0A41E6FF24ABCDAE0041F2D2 /* Assets.xcassets in Resources */,
 			);
